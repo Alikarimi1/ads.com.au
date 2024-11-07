@@ -1,0 +1,343 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    transition: all 0.5s;
+}
+  
+.container {
+    width: 100%;
+    height: 100vh;
+    background: none;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    width: 100%;
+    height: 200px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo a {
+    text-decoration: none;
+}
+.logo h1 {
+    color: white;
+    padding-bottom: 20px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-size: 18px;
+    padding-top: 20px;
+    cursor: pointer;
+}
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.links ul li a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.5s;
+    font-family: "Josefin Slab", serif;
+    font-optical-sizing: auto;
+    letter-spacing: 2px;
+}
+.links ul li {
+    list-style-type: none;
+}
+.links ul li a:hover {
+    color: black;
+}
+
+/* Slider CSS */
+.slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: slide 15s infinite; /* Adjusted the animation duration */
+    transition: opacity 4s ease-in-out; /* Slightly longer transition */
+}
+
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 10s;
+}
+
+@keyframes slide {
+    0%, 33% { opacity: 0; }
+    33%, 66% { opacity: 1; }
+    66%, 100% { opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    .logo h1 {
+        font-size: 1.5em;
+    }
+    .links ul li a {
+        font-size: 1em;
+    }
+}
+
+
+
+/* ?about us section */
+
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px;
+}
+
+.about-image, .about-content {
+    flex: 1;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content {
+    padding: 40px;
+}
+
+.about-content h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'New Rocker', serif;
+}
+
+.about-content h2 {
+    font-size: 1.5em;
+    color: #555;
+    margin-top: 30px;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row;
+        height: 600px; /* Increased height */
+    }
+
+    .about-image, .about-content {
+        flex: 1;
+    }
+
+    .about-content {
+        text-align: left;
+    }
+}
+
+/* projects section  */
+
+
+#projects-section {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#projects-section h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'New Rocker', serif;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h2 {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* contact us section */
+
+
+
+
+#contact-section {
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+#contact-section h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'New Rocker', serif;
+}
+
+.contact-details {
+    margin-bottom: 40px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .contact-container {
+        padding: 60px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.2em;
+    }
+
+    .contact-form button {
+        font-size: 1.2em;
+    }
+}
