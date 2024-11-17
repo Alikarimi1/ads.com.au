@@ -49,8 +49,8 @@ nav {
     text-decoration: none;
     font-size: 14px;
     transition: all 0.5s;
-    font-family: "Josefin Slab", serif;
-    font-optical-sizing: auto;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;  
     letter-spacing: 2px;
 }
 .links ul li {
@@ -283,13 +283,14 @@ nav {
 }
 
 .contact-info .logo-placeholder {
-    text-align: center;
+    
     margin-bottom: 20px;
 }
 
 .contact-info .logo-placeholder img {
     width: 150px;
     height: auto;
+    margin-left: -170px;
 }
 
 .contact-info .details p {
