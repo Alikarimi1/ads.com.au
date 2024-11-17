@@ -62,7 +62,6 @@ nav {
 .links ul li a:hover {
     color: black;
 }
-
 /* Slider CSS */
 .slider {
     position: fixed;
@@ -81,8 +80,8 @@ nav {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    animation: slide 15s infinite; /* Adjusted the animation duration */
-    transition: opacity 4s ease-in-out; /* Slightly longer transition */
+    animation: slideAnimation 15s infinite;
+    transition: opacity 1s ease-in-out; /* Smoother transition */
 }
 
 .slide:nth-child(1) {
@@ -97,22 +96,21 @@ nav {
     animation-delay: 10s;
 }
 
-@keyframes slide {
-    0%, 33% { opacity: 0; }
-    33%, 66% { opacity: 1; }
-    66%, 100% { opacity: 0; }
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    .container {
-        padding: 15px;
+@keyframes slideAnimation {
+    0% {
+        opacity: 0;
     }
-    .logo h1 {
-        font-size: 1.5em;
+    20% {
+        opacity: 1;
     }
-    .links ul li a {
-        font-size: 1em;
+    33% {
+        opacity: 1;
+    }
+    53% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
