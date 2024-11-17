@@ -80,7 +80,7 @@ nav {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 2s ease-in-out; /* Smooth transition */
+    transition: opacity 1.5s ease-in-out; /* Smooth fade transition */
     animation: fade 15s infinite;
 }
 
@@ -97,10 +97,10 @@ nav {
 }
 
 @keyframes fade {
-    0%, 15% {
+    0%, 20% {
         opacity: 1;
     }
-    25%, 100% {
+    33.33%, 100% {
         opacity: 0;
     }
 }
@@ -117,6 +117,7 @@ body::before {
     background-color: black;
     z-index: -2;
 }
+
 
 
 /* ?about us section */
