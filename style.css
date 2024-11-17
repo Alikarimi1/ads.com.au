@@ -80,8 +80,8 @@ nav {
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out; /* Smooth transition */
-    animation: fade 15s infinite;
+    animation: slide 15s infinite; /* Adjusted the animation duration */
+    transition: opacity 4s ease-in-out; /* Slightly longer transition */
 }
 
 .slide:nth-child(1) {
@@ -96,19 +96,24 @@ nav {
     animation-delay: 10s;
 }
 
-@keyframes fade {
-    0%, 10% {
-        opacity: 0;
-    }
-    10%, 30% {
-        opacity: 1;
-    }
-    30.01%, 100% {
-        opacity: 0;
-    }
+@keyframes slide {
+    0%, 33% { opacity: 0; }
+    33%, 66% { opacity: 1; }
+    66%, 100% { opacity: 0; }
 }
 
-
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    .logo h1 {
+        font-size: 1.5em;
+    }
+    .links ul li a {
+        font-size: 1em;
+    }
+}
 
 /* ?about us section */
 
