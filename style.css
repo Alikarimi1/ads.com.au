@@ -81,7 +81,7 @@ nav {
     background-position: center;
     opacity: 0;
     animation: slide 15s infinite; /* Adjusted the animation duration */
-    transition: opacity 4s ease-in-out; /* Slightly longer transition */
+    transition: opacity 4s ; /* Slightly longer transition */
 }
 
 .slide:nth-child(1) {
