@@ -117,53 +117,70 @@
 
 
     <!-- contact us section -->
-    <section id="contact-section">
-      <div class="contact-container">
-          <h1>Contact Us</h1>
-          <div class="contact-details">
-              <p><strong>Email:</strong> Jali@alistudio.com.au</p>
+   
+<section id="contact-section">
+  <div class="contact-container">
+      <div class="contact-info">
+          <div class="logo-placeholder">
+              <img src="images/Ali studio Logo PNG.png" alt="Logo Placeholder">
+          </div>
+          <div class="details">
+              <p><strong>Email:</strong> jali@alistudio.com.au</p>
               <p><strong>Phone:</strong> 0469 893 540</p>
               <p><strong>Address:</strong> 39/43 Duerdin St, Notting Hill VIC 3168</p>
           </div>
+          <div class="social-links">
+              <a href="£"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+      </div>
+      <div class="contact-form-container">
           <form class="contact-form" id="contact-form">
+              <h1>Contact Us</h1>
               <input type="text" name="name" placeholder="Your Name" required>
               <input type="email" name="email" placeholder="Your Email" required>
               <textarea name="message" placeholder="Your Message" required></textarea>
               <button type="submit">Send Message</button>
+              <div class="copyright">
+                  &copy; 2024 Ali Design Studio. All rights reserved.
+              </div>
           </form>
       </div>
-  </section>
-  
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-     (function(){
-        emailjs.init("7Be1r43Buo8GMJxob");
-     })();
-  </script>
-  
-  <script type="text/javascript">
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-          event.preventDefault();
-  
-          // Collect form data
-          const name = event.target.name.value;
-          const email = event.target.email.value;
-          const message = event.target.message.value;
-  
-          // Send email using EmailJS
-          emailjs.send('service_gacmay6', 'template_3hgxzxz', {
-              name: name,
-              email: email,
-              message: message
-          })
-          .then(function(response) {
-              alert('Message sent successfully!');
-          }, function(error) {
-              alert('Failed to send message. Please try again later.');
-          });
+  </div>
+</section>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+      emailjs.init("7Be1r43Buo8GMJxob");
+  })();
+</script>
+
+<script type="text/javascript">
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Collect form data
+      const name = event.target.name.value;
+      const email = event.target.email.value;
+      const message = event.target.message.value;
+
+      // Send email using EmailJS
+      emailjs.send('service_gacmay6', 'template_3hgxzxz', {
+          name: name,
+          email: email,
+          message: message
+      })
+      .then(function(response) {
+          alert('Message sent successfully!');
+      }, function(error) {
+          alert('Failed to send message. Please try again later.');
+          console.error('EmailJS Error:', error);
       });
-  </script>
-  
+  });
+</script>
   
 
   
