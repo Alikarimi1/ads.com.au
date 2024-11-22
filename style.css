@@ -135,7 +135,7 @@ nav {
     text-align: center;
     opacity: 0;
     transform: translateX(-100%);
-    animation: slideIn 1s forwards;
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .about-content h1 {
@@ -151,12 +151,10 @@ nav {
     color: #666;
 }
 
-/* Animation */
-@keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+/* Animation when visible */
+.about-content.visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Responsive Styles */
