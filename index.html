@@ -186,25 +186,6 @@
 
 
 
-// about us section scripts
-
-
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const aboutSection = document.querySelector('.about-content');
-    
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                aboutSection.classList.add('visible');
-                observer.unobserve(aboutSection); // Stop observing once the animation is triggered
-            }
-        });
-    });
-
-    observer.observe(aboutSection);
-});
-
 
 
 
