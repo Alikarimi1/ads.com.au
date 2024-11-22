@@ -158,7 +158,7 @@ nav {
     }
 }
 
-/* projects section  */
+/* Projects Section */
 #projects-section {
     background-color: white;
     padding: 60px 20px;
@@ -169,6 +169,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 #projects-section h1 {
     font-size: 2.5em;
     color: #333;
@@ -210,6 +211,13 @@ nav {
     font-size: 1.2em;
     color: #666;
     line-height: 1.6;
+}
+
+/* Ensuring the right two images match the size of the left two images */
+.same-size img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Responsive Styles */
