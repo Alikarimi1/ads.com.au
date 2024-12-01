@@ -194,9 +194,8 @@ nav {
 .project-card img {
     width: 100%;
     height: 200px; /* Fixed height */
-    object-fit: cover;
+    object-fit: cover; /* Ensures images cover their container */
 }
-
 
 .project-info {
     padding: 20px;
@@ -212,13 +211,6 @@ nav {
     font-size: 1.2em;
     color: #666;
     line-height: 1.6;
-}
-
-/* Ensuring the right two images match the size of the left two images */
-.same-size img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 /* Responsive Styles */
