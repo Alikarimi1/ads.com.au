@@ -223,6 +223,8 @@ footer {
 @media (max-width: 768px) { /* iPads and smaller tablets */
     .menu-button {
         font-size: 20px;
+        background-color:black;
+        color:black;
     }
 
     .menu-links a {
