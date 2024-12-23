@@ -254,7 +254,6 @@ footer {
         text-align: center;
     }
 }
-
 #projects-section {
     background-color: white;
     margin-top: 200px;
@@ -272,7 +271,7 @@ footer {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 300px;
     justify-content: center;
 }
@@ -280,7 +279,6 @@ footer {
 .project-card {
     width: 100%;
     max-width: 380px;
-    height: 550px;
     overflow: hidden;
     text-decoration: none;
     display: flex;
@@ -294,7 +292,7 @@ footer {
     width: 100%;
     height: 450px;
     object-fit: cover;
-    display: none; /* Hidden initially for lazy loading */
+    display: block;
 }
 
 .project-info {
@@ -302,16 +300,16 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    height: 450px;  /* Match the height of the image */
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(206, 203, 203, 0.815); /* Gray background with transparency */
+    background-color: rgba(102, 100, 100, 0.498); /* Gray background with transparency */
     color: white;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     text-align: center;
-    font-size: 10px;
+    font-size: 10px; /* Updated font size */
     font-family: "Comfortaa", sans-serif;
 }
 
@@ -319,108 +317,40 @@ footer {
     opacity: 1;
 }
 
-/* Skeleton styles */
-.skeleton {
-    width: 100%;
-    height: 450px;
-    background: linear-gradient(90deg, #ccc, #e0e0e0, #ccc);
-    background-size: 200% 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    animation: skeleton-loading 1.5s infinite;
-}
-
-/* Skeleton loading animation */
-@keyframes skeleton-loading {
-    0% {
-        background-position: 200% 0;
-    }
-    100% {
-        background-position: -200% 0;
-    }
-}
-
-/* Show images when they are loaded */
-.project-card img[src] {
-    display: block;
-}
-
 /* Responsive Styles */
 @media (min-width: 1024px) {
     .project-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .project-info {
-        font-size: 12px;
+        grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
+        gap: 300px; /* Maintain gap for larger screens */
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
     .project-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+        gap: 100px; /* Smaller gap for tablets */
     }
 
-    .project-info {
-        font-size: 10px;
+    .project-card {
+        max-width: 100%;
+    }
+
+    .project-card img {
+        height: 500px; /* Increased height for tablets */
+        margin-bottom: 50px; /* Extra bottom gap for tablets */
+        margin-top: 20px; /* Additional top margin for tablets */
     }
 }
 
 @media (max-width: 767px) {
-    #projects-section {
-        padding: 40px 10px;
-        margin-top: 100px;
-    }
-
-    .projects-container {
-        padding: 0 10px;
-    }
-
     .project-grid {
-        gap: 20px;
+        grid-template-columns: 1fr; /* Single column layout for phones */
+        gap: 50px; /* Larger gap for phones */
     }
 
-    .project-card {
-        height: 450px;
-    }
-
-    .skeleton {
-        height: 450px;
-    }
-
-    .project-info {
-        font-size: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .project-card {
-        height: 400px;
-    }
-
-    .skeleton {
-        height: 400px;
-    }
-
-    .project-info {
-        height: 400px; /* Match the height of the image */
-        font-size: 8px;
-    }
-}
-
-@media (max-width: 375px) {
-    .project-card {
-        height: 350px;
-    }
-
-    .skeleton {
-        height: 350px;
-    }
-
-    .project-info {
-        height: 350px; /* Match the height of the image */
-        font-size: 7px;
+    .project-card img {
+        height: 450px; /* Increased height for phones */
+        margin-bottom: 100px; /* More bottom gap for phones */
+        margin-top: 30px; /* Increased top margin for phones */
     }
 }
