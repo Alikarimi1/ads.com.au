@@ -295,7 +295,9 @@ footer {
     object-fit: cover;
     display: block;
 }
-
+span{
+    font-size: 10px;
+}
 .project-info {
     position: absolute;
     top: 0;
