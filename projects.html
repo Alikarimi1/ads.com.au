@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">      
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Separate CSS file -->
+    <link rel="icon" href="https://www.alistudio.com.au/images/logoseachbar.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
@@ -15,87 +16,163 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <div class="projects-container">
+    <div class="container">
         <nav>
             <div class="logo">
-                <a href="index.html"><img src="images/alistudio logo png new1.png" alt=""></a>
+                <a href="index1.html"><img src="images/alistudio logo png new1.png" alt="ALI Design Studio Logo"></a>
             </div>
-          
+            <div class="menu">
+                <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+                <div class="menu-links" id="menu-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="studio.html">Studio</a></li>
+                        <li><a href="#link3">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section id="projects-section">
+            <div class="projects-container">
+                <div class="slider-container">
+                    <button class="slider-button prev" onclick="slide(-1)">&#10094;</button>
+                    <div class="project-grid" id="project-grid">
+                        <!-- Cloned slides will be inserted here -->
+                    </div>
+                    <button class="slider-button next" onclick="slide(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>ALI DESIGN STUDIO</p>
+                    <ul class="social-links">
+                        <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/_alidesignstudio/profilecard/?igsh=MWEwZjN3ZDByY295ZA==" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <ul>
+                        <li><a href="mailto:info@alistudio.com">Jali@alistudio.com.au</a></li>
+                        <li><a href="tel:+123456789">0469 893 540</a></li>
+                        <li><a href="" target="_blank">39/43 Duerdin St, Notting Hill Vic 3168</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script>
+            function toggleMenu() {
+                var menuLinks = document.getElementById("menu-links");
+                if (menuLinks.style.display === "block") {
+                    menuLinks.style.display = "none";
+                } else {
+                    menuLinks.style.display = "block";
+                }
+            }
+
+            const projectGrid = document.getElementById('project-grid');
+            const slides = [
+                {
+                    imgSrc: "images/exit.jpg",
+                    alt: "Project 1",
+                    title: "Greenvale Residence"
+                },
+                {
+                    imgSrc: "images/kitchen2.jpg",
+                    alt: "Project 2",
+                    title: "Greenvale Residence"
+                },
+                {
+                    imgSrc: "images/Screen Captures.png",
+                    alt: "Project 3",
+                    title: "Kebab Shop <br> <span>Lygon St, Carlton</span>"
+                },
+                {
+                    imgSrc: "images/Stairs.png",
+                    alt: "Project 4",
+                    title: "Greenvale Residence"
+                }
+            ];
+
+            // Clone slides
+            const clonedSlides = [...slides, ...slides];
+
+            // Render slides
+            clonedSlides.forEach(slide => {
+                const slideElement = document.createElement('div');
+                slideElement.className = 'project-card';
+                slideElement.innerHTML = `
+                    <img src="${slide.imgSrc}" alt="${slide.alt}">
+                    <div class="project-info">
+                        <h2>${slide.title}</h2>
+                    </div>`;
+                projectGrid.appendChild(slideElement);
+            });
+
+            let slideIndex = slides.length;
+            let isSliding = false;
+
+            function slide(direction) {
+                if (isSliding) return;
+                isSliding = true;
+                slideIndex += direction;
+                projectGrid.style.transition = 'transform 0.5s ease-in-out';
+                projectGrid.style.transform = `translateX(-${(100 / (slides.length * 2)) * slideIndex}%)`;
+
+                projectGrid.addEventListener('transitionend', () => {
+                    isSliding = false;
+                    if (slideIndex >= slides.length * 2) {
+                        slideIndex = 0;
+                        projectGrid.style.transition = 'none';
+                        projectGrid.style.transform = `translateX(0)`;
+                    } else if (slideIndex < 0) {
+                        slideIndex = slides.length - 1;
+                        projectGrid.style.transition = 'none';
+                        projectGrid.style.transform = `translateX(-${(100 / (slides.length * 2)) * slideIndex}%)`;
+                    }
+                }, { once: true });
+            }
+
+            // Swipe support
+            let startX, moveX, isSwiping = false;
+            projectGrid.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                projectGrid.style.transition = 'none';
+                isSwiping = true;
+            });
+
+            projectGrid.addEventListener('touchmove', (e) => {
+                if (!isSwiping) return;
+                moveX = e.touches[0].clientX;
+                const diffX = startX - moveX;
+                projectGrid.style.transform = `translateX(calc(-${(100 / (slides.length * 2)) * slideIndex}% - ${diffX}px))`;
+            });
+
+            projectGrid.addEventListener('touchend', () => {
+                if (!isSwiping) return;
+                const diffX = startX - moveX;
+                if (diffX > 50) {
+                    slide(1);
+                } else if (diffX < -50) {
+                    slide(-1);
+                } else {
+                    projectGrid.style.transition = 'transform 0.5s ease-in-out';
+                    projectGrid.style.transform = `translateX(-${(100 / (slides.length * 2)) * slideIndex}%)`;
+                }
+                isSwiping = false;
+            });
+
+            // Initialize position to the first cloned set
+            projectGrid.style.transform = `translateX(0)`;
+
+            // Responsive styling
+            window.addEventListener('resize', () => {
+                projectGrid.style.transition = 'none';
+                projectGrid.style.transform = `translateX(-${(100 / (slides.length * 2)) * slideIndex}%)`;
+                setTimeout(() => projectGrid.style.transition = 'transform 0.5s ease-in-out', 50);
+            });
+        </script>
     </div>
-    <section id="projects-section">
-        <div class="projects-container">
-            <div class="project-grid">
-                <a href="images/exit.jpg" class="project-card" target="_blank">
-                    <img src="images/exit.jpg" alt="Project 1">
-                    <div class="project-info">
-                        <h2>Greenvale Residence</h2>
-                    </div>
-                </a>
-                <a href="images/kitchen.jpg" class="project-card" target="_blank">
-                    <img src="images/kitchen2.jpg" alt="Project 2">
-                    <div class="project-info">
-                        <h2>Greenvale Residence</h2>
-                    </div>
-                </a>
-               <a href="images/Screen Captures.png" class="project-card" target="_blank">
-                    <img src="images/Screen Captures.png" alt="Project 3">
-                    <div class="project-info">
-                        <h2>Kebab Shop <br> <span>Lygon St, Carlton</span></h2>
-                    </div>
-                </a>
-                <a href="images/Stairs.png" class="project-card" target="_blank">
-                    <img src="images/Stairs.png" alt="Project 4">
-                    <div class="project-info">
-                        <h2>Greenvale Residence</h2>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-left">
-                <p>ALI DESIGN STUDIO</p>
-                <ul class="social-links">
-                    <li><a href="https://www.linkedin.com" target="_blank">linkdin</a></li>
-                    <li><a href="https://www.instagram.com/_alidesignstudio/profilecard/?igsh=MWEwZjN3ZDByY295ZA==" target="_blank">Instagram</a></li>
-                </ul>
-            </div>
-            <div class="footer-right">
-                <ul>
-                    <li><a href="mailto:info@alistudio.com">Jali@alistudio.com.au</a></li>
-                    <li><a href="tel:+123456789">0469 893 540</a></li>
-                    <li><a href="" target="_blank">39/43 Duerdin St, Notting Hill Vic 3168</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-    
-    
-    
-    
-
-    
-
-  
-        
-        
-        
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-    
 </body>
 </html>
