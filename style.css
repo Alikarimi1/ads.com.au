@@ -398,6 +398,16 @@ footer {
     line-height: 1.8;
     font-family: 'Georgia', serif; /* Set a beautiful font for the text */
 }
+/* Vision Section */
+#vision {
+    margin-top: 300px; /* Position Vision section lower than the logo */
+    padding: 20px;
+    text-align: justify; /* Justify the text for a clean, aligned look */
+    max-width: 800px;
+    margin: 0 auto; /* Center the section horizontally */
+    line-height: 1.8;
+    font-family: 'Georgia', serif; /* Set a beautiful font for the text */
+}
 
 #vision p {
     font-size: 18px; /* Adjust font size */
@@ -426,8 +436,29 @@ footer {
     width: 80%; /* Adjust width for responsiveness */
     max-width: 400px; /* Set max-width */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.member-name {
+    text-align: center; /* Center the text */
+    font-size: 12px;
+    margin-top: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Responsive design for all devices */
+@media (min-width: 768px) {
+    .image-container {
+        flex-direction: row; /* Arrange images in a row for larger screens */
+        flex-wrap: wrap; /* Allow wrapping if necessary */
+        justify-content: center; /* Center the images */
+    }
+
+    .image-container img {
+        width: 450px; /* Set width to 450px for larger screens */
+        height: 425px; /* Set height to 450px for larger screens */
+        max-width: none; /* Remove max-width constraint */
+    }
 }
 
 .member-name {
