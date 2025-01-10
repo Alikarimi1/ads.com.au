@@ -257,47 +257,46 @@ footer {
 /* projects starts form here */
 #projects-section {
     background-color: white;
-    margin-top: 200px;
-    padding: 60px 20px;
+    padding-top: 200px;
     text-align: center;
 }
 
 .projects-container {
     max-width: 1200px;
     margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-container {
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
+    overflow-x: scroll; /* Enable horizontal scrolling */
 }
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 300px;
-    justify-content: center;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px; /* Add gap between the projects */
 }
 
 .project-card {
-    width: 100%;
-    max-width: 380px;
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
     overflow: hidden;
     text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: relative;
     cursor: pointer;
 }
 
 .project-card img {
     width: 100%;
-    height: 450px;
+    height: 450px; /* Increase the image height */
     object-fit: cover;
     display: block;
 }
-span{
-    font-size: 10px;
-}
+
 .project-info {
     position: absolute;
     top: 0;
@@ -320,41 +319,72 @@ span{
     opacity: 1;
 }
 
-/* Responsive Styles */
-@media (min-width: 1024px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
-        gap: 300px; /* Maintain gap for larger screens */
-    }
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are on top */
+    margin: 0 1px; /* Almost eliminate margin between buttons and projects */
 }
 
-@media (max-width: 1023px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
-        gap: 100px; /* Smaller gap for tablets */
+.slider-button.prev {
+    left: 0;
+}
+
+.slider-button.next {
+    right: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .projects-container {
+        padding-top: 100px;
     }
 
     .project-card {
-        max-width: 100%;
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+
+    .project-grid {
+        gap: 10px;
     }
 
     .project-card img {
-        height: 500px; /* Increased height for tablets */
-        margin-bottom: 50px; /* Extra bottom gap for tablets */
-        margin-top: 20px; /* Additional top margin for tablets */
+        height: 350px; /* Increase the height for smaller screens */
+    }
+
+    .slider-button {
+        display: block; /* Ensure navigation buttons are displayed on smaller screens */
+        font-size: 12px; /* Smaller font size for buttons */
+        padding: 8px; /* Adjust padding for smaller screens */
+        margin: 0 1px; /* Almost eliminate margin on smaller screens */
     }
 }
 
-@media (max-width: 767px) {
-    .project-grid {
-        grid-template-columns: 1fr; /* Single column layout for phones */
-        gap: 50px; /* Larger gap for phones */
+@media (max-width: 480px) {
+    .projects-container {
+        padding-top: 50px;
     }
 
-    .project-card img {
-        height: 450px; /* Increased height for phones */
-        margin-bottom: 100px; /* More bottom gap for phones */
-        margin-top: 30px; /* Increased top margin for phones */
+    .project-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .project-info {
+        font-size: 8px; /* Smaller font size for very small screens */
+    }
+
+    .slider-button {
+        font-size: 12px; /* Smaller font size for buttons */
+        padding: 6px; /* Adjust padding for smaller screens */
+        margin: 0 1px; /* Almost eliminate margin on very small screens */
     }
 }
 
