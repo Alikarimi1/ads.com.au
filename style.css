@@ -254,7 +254,6 @@ footer {
         text-align: center;
     }
 }
-/* projects starts form here */
 #projects-section {
     background-color: white;
     padding-top: 200px;
@@ -272,13 +271,19 @@ footer {
     position: relative;
     display: flex;
     align-items: center;
-    overflow-x: scroll; /* Enable horizontal scrolling */
+    overflow: hidden; /* Updated to hide the scroll bar */
 }
 
 .project-grid {
     display: flex;
     transition: transform 0.5s ease-in-out;
     gap: 20px; /* Add gap between the projects */
+    -ms-overflow-style: none; /* Hide the scrollbar on IE and Edge */
+    scrollbar-width: none; /* Hide the scrollbar on Firefox */
+}
+
+.project-grid::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar on WebKit browsers (Chrome, Safari) */
 }
 
 .project-card {
@@ -387,7 +392,6 @@ footer {
         margin: 0 1px; /* Almost eliminate margin on very small screens */
     }
 }
-
 /* Vision Section */
 #vision {
     margin-top: 300px; /* Position Vision section lower than the logo */
