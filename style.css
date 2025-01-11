@@ -413,6 +413,11 @@ footer {
     font-family: 'Georgia', serif; /* Set a beautiful font for the text */
 }
 
+#vision span {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 14px;
+}
 #vision p {
     font-size: 18px; /* Adjust font size */
     margin-left: 5%; /* Ensure consistent alignment */
