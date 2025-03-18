@@ -4,22 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <link rel="stylesheet" href="style.css"> <!-- Separate CSS file -->
     <link rel="icon" href="https://www.alistudio.com.au/images/logoseachbar.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <nav>
             <div class="logo">
-                <a href="index1.html"><img src="images/alistudio logo png new1.png" alt="ALI Design Studio Logo"></a>
+                <a href="index.html"><img src="images/alistudio logo png new1.png" alt="ALI Design Studio Logo"></a>
             </div>
             <div class="menu">
                 <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
@@ -36,9 +30,7 @@
             <div class="projects-container">
                 <div class="slider-container">
                     <button class="slider-button prev" onclick="slide(-1)">&#10094;</button>
-                    <div class="project-grid" id="project-grid">
-                        <!-- Cloned slides will be inserted here -->
-                    </div>
+                    <div class="project-grid" id="project-grid"></div>
                     <button class="slider-button next" onclick="slide(1)">&#10095;</button>
                 </div>
             </div>
@@ -64,11 +56,7 @@
         <script>
             function toggleMenu() {
                 var menuLinks = document.getElementById("menu-links");
-                if (menuLinks.style.display === "block") {
-                    menuLinks.style.display = "none";
-                } else {
-                    menuLinks.style.display = "block";
-                }
+                menuLinks.style.display = menuLinks.style.display === "block" ? "none" : "block";
             }
 
             const projectGrid = document.getElementById('project-grid');
@@ -93,86 +81,62 @@
                     alt: "Project 3",
                     title: "Kebab Shop <br> <span>Lygon St, Carlton</span>"
                 }
-                
             ];
 
-            // Clone slides
-            const clonedSlides = [...slides, ...slides];
+            const clonedSlides = [...slides, ...slides, ...slides];
 
-            // Render slides
+            // Render slides dynamically
             clonedSlides.forEach(slide => {
                 const slideElement = document.createElement('div');
                 slideElement.className = 'project-card';
                 slideElement.innerHTML = `
-                    <img src="${slide.imgSrc}" alt="${slide.alt}">
+                    <a href="https://www.example.com/${slide.title.replace(/\s+/g, '-').toLowerCase()}" target="_blank">
+                        <img src="${slide.imgSrc}" alt="${slide.alt}">
+                    </a>
                     <div class="project-info">
                         <h2>${slide.title}</h2>
                     </div>`;
                 projectGrid.appendChild(slideElement);
             });
 
-            let slideIndex = slides.length;
+            let currentIndex = slides.length; // Start in the middle for seamless looping
             let isSliding = false;
+
+            function startInfiniteLoop() {
+                projectGrid.style.transition = 'transform 0.3s linear';
+                projectGrid.style.transform = `translateX(-${(100 / clonedSlides.length) * currentIndex}%)`;
+            }
 
             function slide(direction) {
                 if (isSliding) return;
                 isSliding = true;
-                slideIndex += direction;
-                projectGrid.style.transition = 'transform 0.5s ease-in-out';
-                projectGrid.style.transform = `translateX(-${(100 / (slides.length * 2)) * slideIndex}%)`;
+
+                currentIndex += direction;
+                projectGrid.style.transition = 'transform 0.3s ease-in-out';
+                projectGrid.style.transform = `translateX(-${(100 / clonedSlides.length) * currentIndex}%)`;
 
                 projectGrid.addEventListener('transitionend', () => {
                     isSliding = false;
-                    if (slideIndex >= slides.length * 2) {
-                        slideIndex = 0;
+
+                    if (currentIndex >= clonedSlides.length - slides.length) {
+                        currentIndex = slides.length;
                         projectGrid.style.transition = 'none';
-                        projectGrid.style.transform = `translateX(0)`;
-                    } else if (slideIndex < 0) {
-                        slideIndex = slides.length - 1;
+                        projectGrid.style.transform = `translateX(-${(100 / clonedSlides.length) * currentIndex}%)`;
+                    } else if (currentIndex < slides.length) {
+                        currentIndex = clonedSlides.length - slides.length * 2;
                         projectGrid.style.transition = 'none';
-                        projectGrid.style.transform = `translateX(-${(100 / (slides.length * 2)) * slideIndex}%)`;
+                        projectGrid.style.transform = `translateX(-${(100 / clonedSlides.length) * currentIndex}%)`;
                     }
                 }, { once: true });
             }
 
-            // Swipe support
-            let startX, moveX, isSwiping = false;
-            projectGrid.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                projectGrid.style.transition = 'none';
-                isSwiping = true;
-            });
+            function autoplay() {
+                setInterval(() => slide(1), 3000); // Adjust speed as needed
+            }
 
-            projectGrid.addEventListener('touchmove', (e) => {
-                if (!isSwiping) return;
-                moveX = e.touches[0].clientX;
-                const diffX = startX - moveX;
-                projectGrid.style.transform = `translateX(calc(-${(100 / (slides.length * 2)) * slideIndex}% - ${diffX}px))`;
-            });
-
-            projectGrid.addEventListener('touchend', () => {
-                if (!isSwiping) return;
-                const diffX = startX - moveX;
-                if (diffX > 50) {
-                    slide(1);
-                } else if (diffX < -50) {
-                    slide(-1);
-                } else {
-                    projectGrid.style.transition = 'transform 0.5s ease-in-out';
-                    projectGrid.style.transform = `translateX(-${(100 / (slides.length * 2)) * slideIndex}%)`;
-                }
-                isSwiping = false;
-            });
-
-            // Initialize position to the first cloned set
-            projectGrid.style.transform = `translateX(0)`;
-
-            // Responsive styling
-            window.addEventListener('resize', () => {
-                projectGrid.style.transition = 'none';
-                projectGrid.style.transform = `translateX(-${(100 / (slides.length * 2)) * slideIndex}%)`;
-                setTimeout(() => projectGrid.style.transition = 'transform 0.5s ease-in-out', 50);
-            });
+            // Initialize slider
+            startInfiniteLoop();
+            autoplay();
         </script>
     </div>
 </body>
