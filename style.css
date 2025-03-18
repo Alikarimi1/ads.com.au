@@ -254,9 +254,10 @@ footer {
         text-align: center;
     }
 }
+* CSS for the Projects Section */
 #projects-section {
     background-color: white;
-    padding-top: 200px;
+    padding-top: 310px;
     text-align: center;
 }
 
@@ -271,19 +272,14 @@ footer {
     position: relative;
     display: flex;
     align-items: center;
-    overflow: hidden; /* Updated to hide the scroll bar */
+    overflow: hidden;
 }
 
 .project-grid {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    gap: 20px; /* Add gap between the projects */
-    -ms-overflow-style: none; /* Hide the scrollbar on IE and Edge */
-    scrollbar-width: none; /* Hide the scrollbar on Firefox */
-}
-
-.project-grid::-webkit-scrollbar {
-    display: none; /* Hide the scrollbar on WebKit browsers (Chrome, Safari) */
+    transition: transform 0.3s ease-in-out;
+    gap: 20px;
+    will-change: transform; /* Optimize rendering */
 }
 
 .project-card {
@@ -297,7 +293,7 @@ footer {
 
 .project-card img {
     width: 100%;
-    height: 450px; /* Increase the image height */
+    height: 450px;
     object-fit: cover;
     display: block;
 }
@@ -311,12 +307,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(102, 100, 100, 0.498); /* Gray background with transparency */
+    background-color: rgba(102, 100, 100, 0.498);
     color: white;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     text-align: center;
-    font-size: 10px; /* Updated font size */
+    font-size: 10px;
     font-family: "Comfortaa", sans-serif;
 }
 
@@ -333,8 +329,7 @@ footer {
     border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 10; /* Ensure buttons are on top */
-    margin: 0 1px; /* Almost eliminate margin between buttons and projects */
+    z-index: 10;
 }
 
 .slider-button.prev {
@@ -361,14 +356,7 @@ footer {
     }
 
     .project-card img {
-        height: 350px; /* Increase the height for smaller screens */
-    }
-
-    .slider-button {
-        display: block; /* Ensure navigation buttons are displayed on smaller screens */
-        font-size: 12px; /* Smaller font size for buttons */
-        padding: 8px; /* Adjust padding for smaller screens */
-        margin: 0 1px; /* Almost eliminate margin on smaller screens */
+        height: 350px;
     }
 }
 
@@ -383,15 +371,10 @@ footer {
     }
 
     .project-info {
-        font-size: 8px; /* Smaller font size for very small screens */
-    }
-
-    .slider-button {
-        font-size: 12px; /* Smaller font size for buttons */
-        padding: 6px; /* Adjust padding for smaller screens */
-        margin: 0 1px; /* Almost eliminate margin on very small screens */
+        font-size: 8px;
     }
 }
+
 /* Vision Section */
 #vision {
     margin-top: 300px; /* Position Vision section lower than the logo */
