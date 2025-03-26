@@ -254,7 +254,7 @@ footer {
         text-align: center;
     }
 }
-* CSS for the Projects Section */
+/* CSS for the Projects Section */
 #projects-section {
     background-color: white;
     padding-top: 310px;
@@ -338,41 +338,6 @@ footer {
 
 .slider-button.next {
     right: 0;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .projects-container {
-        padding-top: 100px;
-    }
-
-    .project-card {
-        flex: 0 0 80%;
-        max-width: 80%;
-    }
-
-    .project-grid {
-        gap: 10px;
-    }
-
-    .project-card img {
-        height: 350px;
-    }
-}
-
-@media (max-width: 480px) {
-    .projects-container {
-        padding-top: 50px;
-    }
-
-    .project-card {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .project-info {
-        font-size: 8px;
-    }
 }
 
 /* Vision Section */
