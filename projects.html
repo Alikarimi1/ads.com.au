@@ -1,143 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">      
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="icon" href="https://www.alistudio.com.au/images/logoseachbar.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALI DESIGN STUDIO</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img src="images/alistudio logo png new1.png" alt="ALI Design Studio Logo"></a>
-            </div>
-            <div class="menu">
-                <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
-                <div class="menu-links" id="menu-links">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="studio.html">Studio</a></li>
-                        <li><a href="contact.html">Contacts</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <section id="projects-section">
-            <div class="projects-container">
-                <div class="slider-container">
-                    <button class="slider-button prev" onclick="slide(-1)">&#10094;</button>
-                    <div class="project-grid" id="project-grid"></div>
-                    <button class="slider-button next" onclick="slide(1)">&#10095;</button>
-                </div>
-            </div>
-        </section>
-        <footer>
-            <div class="footer-content">
-                <div class="footer-left">
-                    <p>ALI DESIGN STUDIO</p>
-                    <ul class="social-links">
-                        <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-                        <li><a href="https://www.instagram.com/_alidesignstudio/profilecard/?igsh=MWEwZjN3ZDByY295ZA==" target="_blank">Instagram</a></li>
-                    </ul>
-                </div>
-                <div class="footer-right">
-                    <ul>
-                        <li><a href="mailto:info@alistudio.com">Jali@alistudio.com.au</a></li>
-                        <li><a href="tel:+123456789">0469 893 540</a></li>
-                        <li><a href="" target="_blank">39/43 Duerdin St, Notting Hill Vic 3168</a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-        <script>
-            function toggleMenu() {
-                var menuLinks = document.getElementById("menu-links");
-                menuLinks.style.display = menuLinks.style.display === "block" ? "none" : "block";
-            }
-
-            const projectGrid = document.getElementById('project-grid');
-            const slides = [
-                {
-                    imgSrc: "images/exit.jpg",
-                    alt: "Project 1",
-                    title: "Greenvale Residence"
-                },
-                {
-                    imgSrc: "images/kitchen2.jpg",
-                    alt: "Project 2",
-                    title: "Greenvale Residence"
-                },
-                {
-                    imgSrc: "images/Stairs.png",
-                    alt: "Project 4",
-                    title: "Greenvale Residence"
-                },
-                {
-                    imgSrc: "images/Screen Captures.png",
-                    alt: "Project 3",
-                    title: "Kebab Shop <br> <span>Lygon St, Carlton</span>"
-                }
-            ];
-
-            const clonedSlides = [...slides, ...slides, ...slides];
-
-            // Render slides dynamically
-            clonedSlides.forEach(slide => {
-                const slideElement = document.createElement('div');
-                slideElement.className = 'project-card';
-                slideElement.innerHTML = `
-                    <a href="https://www.example.com/${slide.title.replace(/\s+/g, '-').toLowerCase()}" target="_blank">
-                        <img src="${slide.imgSrc}" alt="${slide.alt}">
-                    </a>
-                    <div class="project-info">
-                        <h2>${slide.title}</h2>
-                    </div>`;
-                projectGrid.appendChild(slideElement);
-            });
-
-            let currentIndex = slides.length; // Start in the middle for seamless looping
-            let isSliding = false;
-
-            function startInfiniteLoop() {
-                projectGrid.style.transition = 'transform 0.3s linear';
-                projectGrid.style.transform = `translateX(-${(100 / clonedSlides.length) * currentIndex}%)`;
-            }
-
-            function slide(direction) {
-                if (isSliding) return;
-                isSliding = true;
-
-                currentIndex += direction;
-                projectGrid.style.transition = 'transform 0.3s ease-in-out';
-                projectGrid.style.transform = `translateX(-${(100 / clonedSlides.length) * currentIndex}%)`;
-
-                projectGrid.addEventListener('transitionend', () => {
-                    isSliding = false;
-
-                    if (currentIndex >= clonedSlides.length - slides.length) {
-                        currentIndex = slides.length;
-                        projectGrid.style.transition = 'none';
-                        projectGrid.style.transform = `translateX(-${(100 / clonedSlides.length) * currentIndex}%)`;
-                    } else if (currentIndex < slides.length) {
-                        currentIndex = clonedSlides.length - slides.length * 2;
-                        projectGrid.style.transition = 'none';
-                        projectGrid.style.transform = `translateX(-${(100 / clonedSlides.length) * currentIndex}%)`;
-                    }
-                }, { once: true });
-            }
-
-            function autoplay() {
-                setInterval(() => slide(1), 3000); // Adjust speed as needed
-            }
-
-            // Initialize slider
-            startInfiniteLoop();
-            autoplay();
-        </script>
+  <div class="container">
+    <div class="menu">
+      <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+      <div class="menu-links" id="menu-links">
+        <ul>
+          <li><a href="index1.html">Home</a></li>
+          <!-- <li><a href="projects.html">commercial</a></li>
+          <li><a href="projects.html">Residential</a></li>    -->
+          <li><a href="studio.html">studio</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+        </ul>
+      </div>
     </div>
+   
+    <div class="projects">
+        <div class="row01">
+            <div class="box01">
+
+            </div>
+            <div class="box02">
+
+            </div>
+        </div>
+         <div class="row02">
+            <div class="box03">
+
+            </div>
+            <div class="box04">
+                
+            </div>
+        </div>
+        <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <p>ALI DESIGN STUDIO</p>
+        <ul class="social-links">
+
+        </ul>
+      </div>
+      <div class="footer-right">
+        <ul>
+          <li><a href="mailto:info@alistudio.com">Jali@alistudio.com.au</a></li>
+          <li><a href="tel:+123456789">0469 893 540</a></li>
+          <li><a href="" target="_blank">39/43 Duerdin St, Notting Hill Vic 3168</a></li>
+          <li><a href="https://www.linkedin.com" target="_blank">linkedin</a></li>
+          <li><a href="https://www.instagram.com/_alidesignstudio/profilecard/?igsh=MWEwZjN3ZDByY295ZA==" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+    </div>
+
+
+
+
+    <div class="logo">
+      <a href="index1.html"><img src="images/alistudio logo png new1.png" alt="Logo"></a>
+    </div>
+  </div>
+  <script>
+    function toggleMenu() {
+      var menuLinks = document.getElementById("menu-links");
+      if (menuLinks.style.display === "block") {
+        menuLinks.style.display = "none";
+      } else {
+        menuLinks.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+  
+
+
+
+
+
+
+
+  
+</script>
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Script -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 </html>
