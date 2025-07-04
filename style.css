@@ -123,85 +123,130 @@ body {
         opacity: 1;
     }
 }
+/* Projects Section */
+.projects {
+  width: 100%;
+  height: auto;
+  padding-top: 170px; /* more space from top of page */
+}
 
-/* Footer CSS */
+/* Rows */
+.row01,
+.row02 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 200px;         /* increased horizontal space between boxes */
+  margin-top: 200px;   /* space between rows */
+  margin-bottom: 0;
+}
+
+/* Project Boxes */
+.box01,
+.box02,
+.box03,
+.box04 {
+  width: 350px;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  /* border-radius removed */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Background images */
+.box01 {
+  background-image: url(images/V03\ -\ Exterior\ View.png);
+}
+
+.box02 {
+  background-image: url(images/Stairs.png);
+}
+
+.box03 {
+  background-image: url(images/Screen\ Captures.png);
+}
+
+.box04 {
+  background-image: url(images/kitchen2.jpg);
+}
+
+
+
+
+
 footer {
-    width: 100%;
-    text-align: center;
-    padding: 5px 0;
-    position: relative;
+  width: 100%;
+  padding: 20px 0;
+  font-family: 'Comfortaa', sans-serif;
+  position: relative;
+  bottom: 0;
+  margin-top: 50px;
 }
 
 .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .footer-left p {
-    font-size: 14px;
-    padding-top: 20px;
-    color: black;
-    font-family: 'Comfortaa', sans-serif;
-    margin-left: 50px;  /* Align the paragraph to the left */
+  font-size: 14px;
+  color: black;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.footer-left .social-links {
-    list-style: none;
-    padding: 0;
-    margin-top: 2px;
-    margin-left: 50px;  /* Align the social links to the left */
+.footer-left {
+  list-style: none;
+  padding-top: 30px;
+  margin: 0;
 }
 
-.footer-left .social-links li {
-    display: list-item;
-    margin-right: 10px;
-}
 
-.footer-left .social-links a {
-    color: black;
-    font-size: 10px;
-    text-decoration: none;
-}
 
-.footer-left .social-links a:hover {
-    text-decoration: underline;
-}
 
-.footer-right {
-    margin-right: 50px;  /* Move the right footer to the right */
-}
 
 .footer-right ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-right li {
-    margin: 2px 0;
-    display: flex;
-    font-size: 10px;
-    align-items: center;
-}
-
-.footer-right .icon {
-    height: 30px;
-    width: auto;
-    margin-right: 10px;
+  margin-bottom: 5px;
+  font-size: 10px;
 }
 
 .footer-right a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 .footer-right a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: left;
+  }
+
+  .footer-left,
+  .footer-right {
+    margin-bottom: 20px;
+  }
+}
+
+
 
 /* Responsive Footer */
 @media (max-width: 1024px) { /* Tablets */
@@ -223,8 +268,6 @@ footer {
 @media (max-width: 768px) { /* iPads and smaller tablets */
     .menu-button {
         font-size: 20px;
-        
-        color:black;
     }
 
     .menu-links a {
@@ -254,90 +297,53 @@ footer {
         text-align: center;
     }
 }
-/* CSS for the Projects Section */
-#projects-section {
-    background-color: white;
-    padding-top: 310px;
-    text-align: center;
-}
 
-.projects-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-}
 
-.slider-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.project-grid {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    gap: 20px;
-    will-change: transform; /* Optimize rendering */
-}
-
-.project-card {
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
-    overflow: hidden;
-    text-decoration: none;
-    position: relative;
-    cursor: pointer;
-}
-
-.project-card img {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    display: block;
-}
-
-.project-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+/* About Us Section */
+.about-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(102, 100, 100, 0.498);
-    color: white;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    padding: 40px;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.about-content {
     text-align: center;
-    font-size: 10px;
-    font-family: "Comfortaa", sans-serif;
 }
 
-.project-card:hover .project-info {
-    opacity: 1;
+.about-content h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'New Rocker', serif;
 }
 
-.slider-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
+.about-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
 }
 
-.slider-button.prev {
-    left: 0;
-}
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .about-content h1 {
+        font-size: 3em;
+    }
 
-.slider-button.next {
-    right: 0;
+    .about-content p {
+        font-size: 1.3em;
+    }
 }
 
 /* Vision Section */
@@ -350,17 +356,6 @@ footer {
     line-height: 1.8;
     font-family: 'Georgia', serif; /* Set a beautiful font for the text */
 }
-/* Vision Section */
-#vision {
-    margin-top: 300px; /* Position Vision section lower than the logo */
-    padding: 20px;
-    text-align: justify; /* Justify the text for a clean, aligned look */
-    max-width: 800px;
-    margin: 0 auto; /* Center the section horizontally */
-    line-height: 1.8;
-    font-family: 'Georgia', serif; /* Set a beautiful font for the text */
-}
-
 #vision span {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
@@ -380,27 +375,34 @@ footer {
     padding: 20px;
     text-align: center;
     margin-top: 50px;
-}
-
-.image-container {
+    justify-content: center;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px; /* Space between images */
+    gap: 50px;
 }
 
-.image-container img {
-    width: 80%; /* Adjust width for responsiveness */
-    max-width: 400px; /* Set max-width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px;
-}
 
+
+  
+.Jawidali{
+    width: 350px;
+    height: 400px;
+    background-image: url(images/IMG_1670.PNG);
+    background-position: center;
+    background-size: cover;
+}
+.alikarimi{
+    width: 350px;
+    height: 400px;
+    background-image: url(images/IMG_2969.JPG);
+        background-position: center;
+    background-size: cover;
+}
 .member-name {
     text-align: center; /* Center the text */
     font-size: 12px;
     margin-top: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
 }
 
 /* Responsive design for all devices */
@@ -418,38 +420,21 @@ footer {
     }
 }
 
-.member-name {
-    text-align: center; /* Center the text */
-    font-size: 12px;
-    margin-top: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-/* Responsive design for all devices */
-@media (min-width: 768px) {
-    .image-container img {
-        width: 100%; /* Adjust width for larger screens */
-        max-width: 500px; /* Increase max-width for larger screens */
-        height: auto; /* Maintain aspect ratio */
-    }
-}
-
-
-
-
-
-
-
 
 #contact-section {
     text-align: center;
     padding: 250px 20px 50px 20px; /* Top padding of 150px to create space */
+    background: url(images/Stairs.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
 }
 
 
 
 .contact-container {
-    display: flex;
+    
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -509,6 +494,5 @@ footer {
         width: 100%;
     }
 }
-
 
 
