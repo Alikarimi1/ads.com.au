@@ -397,6 +397,7 @@ footer {
   .Jawidali, .alikarimi {
     width: 90%;
     height: 300px;
+    margin-left: 20px;
   }
 
   .member-name {
@@ -416,8 +417,8 @@ footer {
   }
 
   #vision {
-    margin-top: 150px;
-    padding: 10px;
+    margin-top: 0px;
+    padding-top: 140px;
   }
 
   #vision p {
@@ -475,3 +476,4 @@ footer {
     text-align: center;
   }
 }
+
