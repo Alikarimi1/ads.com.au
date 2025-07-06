@@ -96,17 +96,9 @@ body {
     transition: opacity 2s ease-in-out;
 }
 
-.slide:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.slide:nth-child(2) {
-    animation-delay: 4s;
-}
-
-.slide:nth-child(3) {
-    animation-delay: 8s;
-}
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 4s; }
+.slide:nth-child(3) { animation-delay: 8s; }
 
 @keyframes slide {
     0%, 25% { opacity: 0; }
@@ -114,68 +106,42 @@ body {
     75%, 100% { opacity: 0; }
 }
 
-/* Animation Keyframes */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
+
 /* Projects Section */
 .projects {
   width: 100%;
   height: auto;
-  padding-top: 170px; /* more space from top of page */
+  padding-top: 170px;
 }
 
-/* Rows */
-.row01,
-.row02 {
+.row01, .row02 {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 200px;         /* increased horizontal space between boxes */
-  margin-top: 200px;   /* space between rows */
+  gap: 200px;
+  margin-top: 200px;
   margin-bottom: 0;
 }
 
-/* Project Boxes */
-.box01,
-.box02,
-.box03,
-.box04 {
+.box01, .box02, .box03, .box04 {
   width: 350px;
   height: 400px;
   background-position: center;
   background-size: cover;
-  /* border-radius removed */
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Background images */
-.box01 {
-  background-image: url(images/V03\ -\ Exterior\ View.png);
-}
+.box01 { background-image: url(images/V03\ -\ Exterior\ View.png); }
+.box02 { background-image: url(images/Stairs.png); }
+.box03 { background-image: url(images/Screen\ Captures.png); }
+.box04 { background-image: url(images/kitchen2.jpg); }
 
-.box02 {
-  background-image: url(images/Stairs.png);
-}
-
-.box03 {
-  background-image: url(images/Screen\ Captures.png);
-}
-
-.box04 {
-  background-image: url(images/kitchen2.jpg);
-}
-
-
-
-
-
+/* Footer */
 footer {
   width: 100%;
   padding: 20px 0;
@@ -196,26 +162,25 @@ footer {
 }
 
 .footer-left p {
-  font-size: 20px;
+  font-size: 70px;
   color: black;
+  font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 .footer-left {
   list-style: none;
-  padding-top: 30px;
+  padding-top: 10px;
   margin: 0;
+  margin-left: -100px;
 }
-
-
-
-
 
 .footer-right ul {
   list-style: none;
-  padding: 0;
+  padding-top: 20px;
   margin: 0;
+  margin-right: -100px;
 }
 
 .footer-right li {
@@ -232,74 +197,7 @@ footer {
   text-decoration: underline;
 }
 
-/* Responsive for mobile */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    padding: 0 20px;
-    text-align: left;
-  }
-
-  .footer-left,
-  .footer-right {
-    margin-bottom: 20px;
-  }
-}
-
-
-
-/* Responsive Footer */
-@media (max-width: 1024px) { /* Tablets */
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .footer-left, .footer-right {
-        margin: 10px 0;
-    }
-
-    .footer-left p, .footer-left .social-links, .footer-right ul {
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 768px) { /* iPads and smaller tablets */
-    .menu-button {
-        font-size: 20px;
-    }
-
-    .menu-links a {
-        font-size: 12px;
-    }
-
-    .footer-content {
-        padding: 20px;
-    }
-}
-
-@media (max-width: 375px) { /* iPhone 15, 16 */
-    .menu-button {
-        font-size: 18px;
-    }
-
-    .menu-links a {
-        font-size: 10px;
-    }
-
-    .footer-content {
-        padding: 10px 20px;
-    }
-
-    .footer-left p, .footer-left .social-links, .footer-right ul {
-        margin: 0 auto;
-        text-align: center;
-    }
-}
-
-
-/* About Us Section */
+/* About Section */
 .about-section {
     display: flex;
     justify-content: center;
@@ -335,39 +233,29 @@ footer {
     margin-bottom: 20px;
 }
 
-/* Responsive Styles */
-@media (min-width: 768px) {
-    .about-content h1 {
-        font-size: 3em;
-    }
-
-    .about-content p {
-        font-size: 1.3em;
-    }
-}
-
 /* Vision Section */
 #vision {
-    margin-top: 300px; /* Position Vision section lower than the logo */
+    margin-top: 300px;
     padding: 20px;
-    text-align: justify; /* Justify the text for a clean, aligned look */
+    text-align: justify;
     max-width: 800px;
-    margin: 0 auto; /* Center the section horizontally */
+    margin: 0 auto;
     line-height: 1.8;
-    font-family: 'Georgia', serif; /* Set a beautiful font for the text */
+    font-family: 'Georgia', serif;
 }
+
 #vision span {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
     font-size: 14px;
 }
+
 #vision p {
-    font-size: 18px; /* Adjust font size */
-    margin-left: 5%; /* Ensure consistent alignment */
+    font-size: 16px;
+    margin-left: 5%;
     margin-top: 300px;
     margin-right: 5%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 16px;
 }
 
 /* Members Section */
@@ -380,50 +268,33 @@ footer {
     gap: 50px;
 }
 
-
-
-  
-.Jawidali{
+.Jawidali, .alikarimi {
     width: 350px;
     height: 400px;
-    background-image: url(images/IMG_1670.PNG);
     background-position: center;
     background-size: cover;
 }
-.alikarimi{
-    width: 350px;
-    height: 400px;
-    background-image: url(images/IMG_2969.JPG);
-        background-position: center;
-    background-size: cover;
+
+.Jawidali {
+    background-image: url(images/IMG_1670.PNG);
 }
+
+.alikarimi {
+    background-image: url(images/IMG_2969.JPG);
+}
+
 .member-name {
-    text-align: center; /* Center the text */
+    text-align: center;
     font-size: 12px;
     margin-top: 10px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
 }
 
-/* Responsive design for all devices */
-@media (min-width: 768px) {
-    .image-container {
-        flex-direction: row; /* Arrange images in a row for larger screens */
-        flex-wrap: wrap; /* Allow wrapping if necessary */
-        justify-content: center; /* Center the images */
-    }
-
-    .image-container img {
-        width: 450px; /* Set width to 450px for larger screens */
-        height: 425px; /* Set height to 450px for larger screens */
-        max-width: none; /* Remove max-width constraint */
-    }
-}
-
-
+/* Contact Section */
 #contact-section {
     text-align: center;
-    padding: 250px 20px 50px 20px; /* Top padding of 150px to create space */
+    padding: 250px 20px 50px 20px;
     background: url(images/Stairs.png);
     background-position: center;
     background-size: cover;
@@ -431,26 +302,19 @@ footer {
     height: 80vh;
 }
 
-
-
 .contact-container {
-    
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
-.contact-info {
+.contact-info, .contact-info p {
     max-width: 400px;
-    text-align: left; /* Align text to the left */
-    font-size: 14px;
-}
-.contact-info p{
-    max-width: 400px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
     font-size: 14px;
     font-family: 'Times New Roman', Times, serif;
 }
+
 .contact-details, .social-list {
     list-style: none;
     padding: 0;
@@ -480,19 +344,130 @@ footer {
     width: 100%;
 }
 
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .row01, .row02 {
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-top: 100px;
+  }
 
+  .box01, .box02, .box03, .box04 {
+    width: 300px;
+    height: 350px;
+  }
 
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
 
-
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .map-container iframe {
-        width: 100%;
-    }
+  .footer-left, .footer-right {
+    margin: 10px 110px;
+  }
 }
 
+@media (max-width: 768px) {
+  .projects {
+    padding-top: 100px;
+  }
 
+  .row01, .row02 {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin-top: 80px;
+  }
+
+  .box01, .box02, .box03, .box04 {
+    width: 90%;
+    height: 300px;
+  }
+
+  #members {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .Jawidali, .alikarimi {
+    width: 90%;
+    height: 300px;
+  }
+
+  .member-name {
+    font-size: 14px;
+  }
+
+  .about-section {
+    padding: 20px;
+  }
+
+  .about-content h1 {
+    font-size: 2em;
+  }
+
+  .about-content p {
+    font-size: 1em;
+  }
+
+  #vision {
+    margin-top: 150px;
+    padding: 10px;
+  }
+
+  #vision p {
+    font-size: 14px;
+    margin: 20px 10px;
+  }
+
+  #contact-section {
+    padding: 150px 10px 40px 10px;
+    height: auto;
+  }
+
+  .contact-info, .contact-info p {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .menu-button {
+    font-size: 20px;
+  }
+
+  .menu-links a {
+    font-size: 12px;
+  }
+
+  .footer-content {
+    padding: 20px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-container iframe {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .menu-button {
+    font-size: 18px;
+  }
+
+  .menu-links a {
+    font-size: 10px;
+  }
+
+  .footer-content {
+    padding: 10px 20px;
+  }
+
+  .footer-left p, .footer-left .social-links, .footer-right ul {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
