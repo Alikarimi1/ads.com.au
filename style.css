@@ -134,14 +134,308 @@ body {
   height: 400px;
   background-position: center;
   background-size: cover;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+   position: relative;
+  cursor: pointer;
+
+
+}
+.box05:hover .overlay{
+  opacity: 1;
+  transform: scale(1);
+}
+.overlay{
+  position: absolute;
+  background-color: rgba(28, 27, 27, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(1.3);
+  opacity: 0;
+  transition: transform .7s ease 0s;
+}
+
+.overlay span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  font-family: Sans-serif;
+}
+
+.box05 img{
+  transition: transform .8s ease;
+}
+
+.box05:hover img{
+  transform: scale(1.1);
+}
+
+.box06:hover .overlay{
+  opacity: 1;
+  transform: scale(1);
+}
+.overlay{
+  position: absolute;
+  background-color: rgba(28, 27, 27, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(1.3);
+  opacity: 0;
+  transition: transform .7s ease 0s;
+}
+
+.overlay span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  font-family: Sans-serif;
+}
+
+.box06 img{
+  transition: transform .8s ease;
+}
+
+.box06:hover img{
+  transform: scale(1.1);
+}
+.box07:hover .overlay{
+  opacity: 1;
+  transform: scale(1);
+}
+.overlay{
+  position: absolute;
+  background-color: rgba(28, 27, 27, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(1.3);
+  opacity: 0;
+  transition: transform .7s ease 0s;
+}
+
+.overlay span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  font-family: Sans-serif;
+}
+
+.box07 img{
+  transition: transform .8s ease;
+}
+
+.box07:hover img{
+  transform: scale(1.1);
+}
+
+.box08:hover .overlay{
+  opacity: 1;
+  transform: scale(1);
+}
+.overlay{
+  position: absolute;
+  background-color: rgba(28, 27, 27, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(1.3);
+  opacity: 0;
+  transition: transform .7s ease 0s;
+}
+
+.overlay span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  font-family: Sans-serif;
+}
+
+.box08 img{
+  transition: transform .8s ease;
+}
+
+.box08:hover img{
+  transform: scale(1.1);
+}
+
+/* comercial */
+.box01:hover .overlay{
+  opacity: 1;
+  transform: scale(1);
+}
+.overlay{
+  position: absolute;
+  background-color: rgba(28, 27, 27, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(1.3);
+  opacity: 0;
+  transition: transform .7s ease 0s;
+}
+
+.overlay span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  font-family: Sans-serif;
+}
+
+.box01 img{
+  transition: transform .8s ease;
+}
+
+.box01:hover img{
+  transform: scale(1.1);
+}
+
+.box02:hover .overlay{
+  opacity: 1;
+  transform: scale(1);
+}
+.overlay{
+  position: absolute;
+  background-color: rgba(28, 27, 27, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(1.3);
+  opacity: 0;
+  transition: transform .7s ease 0s;
+}
+
+.overlay span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  font-family: Sans-serif;
+}
+
+.box02 img{
+  transition: transform .8s ease;
+}
+
+.box02:hover img{
+  transform: scale(1.1);
+}
+
+.box03:hover .overlay{
+  opacity: 1;
+  transform: scale(1);
+}
+.overlay{
+  position: absolute;
+  background-color: rgba(28, 27, 27, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(1.3);
+  opacity: 0;
+  transition: transform .7s ease 0s;
+}
+
+.overlay span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  font-family: Sans-serif;
+}
+
+.box03 img{
+  transition: transform .8s ease;
+}
+
+.box03:hover img{
+  transform: scale(1.1);
+}
+
+/* .box04:hover .overlay{
+  opacity: 1;
+  transform: scale(1);
+}
+.overlay{
+  position: absolute;
+  background-color: rgba(28, 27, 27, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(1.3);
+  opacity: 0;
+  transition: transform .7s ease 0s;
+}
+
+.overlay span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  font-family: Sans-serif;
+}
+
+.box04 img{
+  transition: transform .8s ease;
+}
+
+.box04:hover img{
+  transform: scale(1.1);
+} */
+
+
+
+
+.box05, .box06, .box07, .box08 {
+  width: 350px;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+   overflow: hidden;
+   position: relative;
+  cursor: pointer;
+
 }
 
 .box01 { background-image: url(images/V03\ -\ Exterior\ View.png); }
 .box02 { background-image: url(images/Stairs.png); }
-.box03 { background-image: url(images/Screen\ Captures.png); }
-.box04 { background-image: url(images/kitchen2.jpg); }
+.box03 { background-image: url(images/kitchen2.jpg); }
+.box04 { background-image: url(image/); }
 
+
+.box05 { background-image: url(images/Screen\ Captures.png); }
+.box06 { background-image: url(images/nargges\ salon.jpg); }
+.box07 { background-image: url(images/nargges\ salon\ 02.jpg); }
+.box08 { background-image: url(images/najafi\ barber\ shop.jpg); }
 /* Footer */
 footer {
   width: 100%;
@@ -266,18 +560,31 @@ footer {
     margin-top: 50px;
     justify-content: center;
     display: flex;
-    gap: 50px;
+    gap: 200px;
 }
 
 .Jawidali, .alikarimi {
     width: 350px;
-    height: 400px;
+    height: 380px;
     background-position: center;
     background-size: cover;
 }
 
 .Jawidali {
     background-image: url(images/IMG_1670.PNG);
+}
+.info-jawid{
+  width: 50%;
+  height: 40%;
+  padding-left: 19.5%;
+  padding-right: 6.5%;
+}
+.info-jawid p{
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.jawid{
+  font-weight:600;
 }
 
 .alikarimi {
@@ -353,10 +660,10 @@ footer {
     margin-top: 100px;
   }
 
-  .box01, .box02, .box03, .box04 {
+  /* .box01, .box02, .box03, .box04 {
     width: 300px;
     height: 350px;
-  }
+  } */
 
   .footer-content {
     flex-direction: column;
@@ -384,10 +691,10 @@ footer {
     margin-top: 80px;
   }
 
-  .box01, .box02, .box03, .box04 {
+  /* .box01, .box02, .box03, .box04 {
     width: 90%;
     height: 300px;
-  }
+  } */
 
   #members {
     flex-direction: column;
@@ -426,10 +733,7 @@ footer {
     margin: 20px 10px;
   }
 
-  #contact-section {
-    padding: 150px 10px 40px 10px;
-    height: auto;
-  }
+
 
   .contact-info, .contact-info p {
     text-align: center;
@@ -475,5 +779,5 @@ footer {
     margin: 0 auto;
     text-align: center;
   }
-}
 
+}
