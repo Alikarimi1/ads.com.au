@@ -38,6 +38,7 @@ body {
     flex-direction: column;
     margin-top: 20px;
     animation: fadeIn 0.5s forwards;
+    color: black;
 }
 
 .menu-links ul {
@@ -363,8 +364,11 @@ footer {
     padding: 0;
   }
 
-  .footer-left, .footer-right {
-    margin: 10px 110px;
+  .footer-left {
+    margin: 10px 55px;
+  }
+  .footer-right{
+    margin: 2px 90px;
   }
 }
 
