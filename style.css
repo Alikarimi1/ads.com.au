@@ -569,10 +569,11 @@ footer {
     height: 380px;
     background-position: center;
     background-size: cover;
+    
 }
 
 .Jawidali {
-    background-image: url(images/IMG_1670.PNG);
+    background-color: gray;
 }
 .info-jawid{
   width: 50%;
@@ -589,7 +590,7 @@ footer {
 }
 
 .alikarimi {
-    background-image: url(images/alialialiali.JPG);
+    background-color: gray;
 }
 
 .member-name {
@@ -782,3 +783,4 @@ footer {
   }
 
 }
+
