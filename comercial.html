@@ -3,121 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALI  STUDIO</title>
+  <title>ALI STUDIO</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
+    <!-- Menu -->
     <div class="menu">
       <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
       <div class="menu-links" id="menu-links">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="comercial.html">commercial</a></li>
-          <li><a href="projects.html">Residential</a></li>   
-          <li><a href="studio.html">studio</a></li>
+          <li><a href="comercial.html">Commercial</a></li>
+          <li><a href="projects.html">Residential</a></li>
+          <li><a href="studio.html">Studio</a></li>
           <li><a href="contact.html">Contacts</a></li>
         </ul>
       </div>
     </div>
-   
+
+    <!-- Projects -->
     <div class="projects">
-        <div class="row01">
-            <div class="box05">
-                <div class="overlay">
-                <span>Lygon Resturant</span>
-                </div>
-            </div>
-            <div class="box06">
-                <div class="overlay">
-                <span>Nargges Salon</span>
-                </div>
-            </div>
+      <div class="row01">
+        <div class="box05">
+          <div class="overlay">
+            <span>Lygon Restaurant</span>
+          </div>
         </div>
-         <div class="row02">
-            <div class="box07">
-                <div class="overlay">
-                <span>Nargges Salon</span>
-                </div>
-            </div>
-            <div class="box08">
-                <div class="overlay">
-                <span>Najafi Barber </span>
-                </div>
-            </div>
+        <div class="box06">
+          <div class="overlay">
+            <span>Nargges Salon</span>
+          </div>
         </div>
-        <footer>
+      </div>
+
+      <div class="row02">
+        <div class="box07">
+          <div class="overlay">
+            <span>Nargges Salon</span>
+          </div>
+        </div>
+        <div class="box08">
+          <div class="overlay">
+            <span>Najafi Barber</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Logo -->
+    <div class="logo">
+      <a href="index.html"><img src="images/alistudio logo png new1.png" alt="Logo"></a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
     <div class="footer-content">
       <div class="footer-left">
-        <p>ALI  STUDIO</p>
-        <ul class="social-links">
-
-        </ul>
+        <p>ALI STUDIO</p>
+        <ul class="social-links"></ul>
       </div>
       <div class="footer-right">
         <ul>
-          <li><a href="mailto:info@alistudio.com">Jali@alistudio.com.au</a></li>
-          <li><a href="tel:+123456789">0469 893 540</a></li>
-          <li><a href="" target="_blank">23 Leopold Cres, Hampton Park 3976</a></li>
-          <li><a href="https://www.linkedin.com" target="_blank">linkedin</a></li>
+          <li><a href="mailto:Jali@alistudio.com.au">Jali@alistudio.com.au</a></li>
+          <li><a href="tel:+61469893540">0469 893 540</a></li>
+          <li><a href="#" target="_blank">23 Leopold Cres, Hampton Park 3976</a></li>
+          <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
           <li><a href="https://www.instagram.com/_alidesignstudio/profilecard/?igsh=MWEwZjN3ZDByY295ZA==" target="_blank">Instagram</a></li>
         </ul>
       </div>
     </div>
   </footer>
-    </div>
 
-
-
-
-    <div class="logo">
-      <a href="index.html"><img src="images/alistudio logo png new1.png" alt="Logo"></a>
-    </div>
-  </div>
+  <!-- Script -->
   <script>
     function toggleMenu() {
       var menuLinks = document.getElementById("menu-links");
-      if (menuLinks.style.display === "block") {
-        menuLinks.style.display = "none";
-      } else {
-        menuLinks.style.display = "block";
-      }
+      menuLinks.style.display = (menuLinks.style.display === "block") ? "none" : "block";
     }
   </script>
-</body>
-</html>
-
-
-
-  
-
-
-
-
-
-
-
-  
-</script>
-  
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Script -->
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 </html>
