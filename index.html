@@ -5,14 +5,175 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Title & Description -->
-  <title>ALI DESIGN STUDIO | Residential & Commercial Design</title>
-  <meta name="description" content="ALI DESIGN STUDIO specialises in unique residential and commercial architecture, interiors, and design solutions in Melbourne.">
-  <meta name="keywords" content="architecture, interior design, residential design, commercial design, Melbourne, ALI Design Studio">
-  <meta name="author" content="ALI DESIGN STUDIO">
+  <title>ALI STUDIO | Residential & Commercial Design</title>
+  <meta name="description" content="ALI STUDIO specialises in unique residential and commercial architecture, interiors, and design solutions in Melbourne.">
+  <meta name="keywords" content="architecture, interior design, residential design, commercial design, Melbourne, ALI STUDIO">
+  <meta name="author" content="ALI STUDIO">
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      margin: 0;
+      background: #121212;
+      font-family: "Comfortaa", Arial, sans-serif;
+      color: #e0e0e0;
+    }
+
+    .container {
+      position: relative;
+      text-align: center;
+    }
+
+    /* Menu */
+    .menu {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    .menu-button {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .menu-links {
+      display: none;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .menu-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-links li {
+      margin: 10px 0;
+    }
+
+    .menu-links a {
+      color: #8be9fd;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    /* Slider */
+    .slider {
+      display: flex;
+      overflow: hidden;
+      height: 400px;
+    }
+
+    .slide {
+      min-width: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+    }
+
+    /* Logo */
+    .logo {
+      margin: 20px;
+    }
+
+    .logo img {
+      width: 100px;
+    }
+
+    /* Search Result Preview */
+    .search-result {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #1e1e1e;
+      border-radius: 10px;
+    }
+
+    .search-result .result-link {
+      font-size: 14px;
+      color: #9aa0a6;
+      margin-bottom: 5px;
+    }
+
+    .search-result h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .search-result h2 a {
+      text-decoration: none;
+      color: #ff79c6;
+    }
+
+    .search-result .result-desc {
+      font-size: 14px;
+      margin: 5px 0 15px;
+      color: #d1d5db;
+    }
+
+    .sub-links {
+      border-top: 1px solid #333;
+      padding-top: 10px;
+    }
+
+    .sub-link {
+      margin-top: 10px;
+    }
+
+    .sub-link a {
+      font-size: 14px;
+      color: #8be9fd;
+      text-decoration: none;
+    }
+
+    .sub-link p {
+      font-size: 13px;
+      margin: 3px 0;
+      color: #bbb;
+    }
+
+    /* Footer */
+    footer {
+      background: #1e1e1e;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-left p {
+      margin: 0;
+      font-weight: bold;
+      color: #ff79c6;
+    }
+
+    .footer-right ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-right li {
+      margin: 5px 0;
+    }
+
+    .footer-right a {
+      color: #8be9fd;
+      text-decoration: none;
+    }
+  </style>
 
   <!-- Schema Markup -->
   <script type="application/ld+json">
@@ -40,27 +201,61 @@
 </head>
 <body>
   <div class="container">
+    <!-- Menu -->
     <div class="menu">
       <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
       <div class="menu-links" id="menu-links">
         <ul>
-          <li><a href="comercial.html">Commercial</a></li>
-          <li><a href="projects.html">Residential</a></li>          
+          <li><a href="residential.html">Residential</a></li>
+          <li><a href="commercial.html">Commercial</a></li>
           <li><a href="studio.html">Studio</a></li>
-          <li><a href="contact.html">Contacts</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
+
+    <!-- Slider -->
     <div class="slider">
       <div class="slide" style="background-image: url('images/kitchen2.jpg');"></div>
       <div class="slide" style="background-image: url('images/Stairs.png');"></div>
       <div class="slide" style="background-image: url('images/V03-Exterior-View.png');"></div>
     </div>
+
+    <!-- Logo -->
     <div class="logo">
-      <a href="index.html"><img src="images/logo.png" ></a>
+      <a href="index.html"><img src="images/logo.png"></a>
     </div>
   </div>
 
+  <!-- Search Result Preview Section -->
+  <div class="search-result">
+    <div class="result-link">alistudio.com.au</div>
+    <h2><a href="index.html">ALI STUDIO</a></h2>
+    <p class="result-desc">
+      1. Residential · 2. Commercial · 3. Studio · 4. Contact. ALI STUDIO, 23 Leopold Cres, Hampton Park 3976.
+    </p>
+
+    <div class="sub-links">
+      <div class="sub-link">
+        <a href="residential.html">1. Residential</a>
+        <p>Explore our residential projects blending comfort and elegance.</p>
+      </div>
+      <div class="sub-link">
+        <a href="commercial.html">2. Commercial</a>
+        <p>Functional and innovative commercial design solutions.</p>
+      </div>
+      <div class="sub-link">
+        <a href="studio.html">3. Studio</a>
+        <p>Unique studio concepts crafted for modern lifestyles.</p>
+      </div>
+      <div class="sub-link">
+        <a href="contact.html">4. Contact</a>
+        <p>Get in touch for collaborations and inquiries.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div class="footer-left">
@@ -76,6 +271,7 @@
     </div>
   </footer>
 
+  <!-- Menu Toggle Script -->
   <script>
     function toggleMenu() {
       var menuLinks = document.getElementById("menu-links");
@@ -91,5 +287,3 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 </html>
-
-
