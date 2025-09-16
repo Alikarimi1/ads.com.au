@@ -378,7 +378,7 @@ body {
   transform: scale(1.1);
 }
 
-/* .box04:hover .overlay{
+.box04:hover .overlay{
   opacity: 1;
   transform: scale(1);
 }
@@ -410,7 +410,7 @@ body {
 
 .box04:hover img{
   transform: scale(1.1);
-} */
+}
 
 
 
@@ -783,5 +783,6 @@ footer {
   }
 
 }
+
 
 
