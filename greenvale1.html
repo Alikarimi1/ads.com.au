@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greenvale Residence – ALI DESIGN STUDIO</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== GENERAL STYLES ===== */
+body {
+  font-family: 'Comfortaa', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+
+}
+
+/* ===== HEADER ===== */
+.container233 {
+ padding-top: 15%;
+}
+
+/* Menu CSS */
+.menu {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    z-index: 2;
+}
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+}
+
+.menu-links {
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
+    animation: fadeIn 0.5s forwards;
+    color: black;
+}
+
+.menu-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-links li {
+    padding: px 0;
+}
+
+.menu-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.menu-links a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    cursor: pointer;
+}
+
+
+/* ===== GALLERY ===== */
+.gallery-container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 50px auto 200px auto; /* smaller top margin */
+  display: flex;
+  flex-direction: column;
+  gap: 180px; /* vertical gap between images */
+}
+
+.gallery-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.gallery-item:nth-child(even) {
+  flex-direction: row-reverse; /* alternate sides */
+}
+
+.gallery-item img {
+  display: block;
+  height: auto;
+
+}
+
+/* Different widths for variety */
+.gallery-item:nth-child(1) img { width: 65%; }
+.gallery-item:nth-child(2) img { width: 50%; }
+.gallery-item:nth-child(3) img { width: 75%; }
+.gallery-item:nth-child(4) img { width: 60%; }
+
+.gallery-text {
+  flex: 1;
+  max-width: 450px;
+  font-size: 18px;
+  line-height: 1.8;
+
+}
+
+.gallery-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.gallery-text p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-content {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left p {
+  font-weight: bold;
+  margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.footer-right ul li {
+  margin-bottom: 8px;
+}
+
+.footer-right ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-right ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .gallery-item {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .gallery-item img {
+    width: 100% !important;
+  }
+  .gallery-text {
+    max-width: 95%;
+  }
+
+  .menu-links ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER (same as main pages) -->
+  <div class="container233">
+    <div class="menu">
+      <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
+      <div class="menu-links" id="menu-links">
+        <ul>
+          <li><a href="index1.html">Home</a></li>
+          <li><a href="comercial.html">Commercial</a></li>
+          <li><a href="projects.html">Residential</a></li>   
+          <li><a href="studio.html">Studio</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="logo">
+      <a href="index1.html"><img src="images/logo.png" alt="Logo"></a>
+    </div>
+  </div>
+
+  <!-- GALLERY SECTION -->
+  <div class="gallery-container">
+
+    <div class="gallery-item">
+      <img src="images/23.100_20_Silvan_TCE_-_Preplanning_package_240630[1]_Page_01.jpg" alt="Greenvale Project 1">
+      <div class="gallery-text">
+        <h2>Exterior View</h2>
+        <p>
+          The façade of Greenvale Residence blends modern geometry with natural tones, creating a luxurious and timeless look.
+        </p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/23.100_20_Silvan_TCE_-_Preplanning_package_240630[1]_Page_03.jpg" alt="Greenvale Project 2">
+      <div class="gallery-text">
+        <h2>Living Room</h2>
+        <p>
+          Spacious and elegant interiors with natural lighting and open layouts, designed for comfort and sophistication.
+        </p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/23.100_20_Silvan_TCE_-_Preplanning_package_240630[1]_Page_03.jpg" alt="Greenvale Project 3">
+      <div class="gallery-text">
+        <h2>Kitchen & Dining</h2>
+        <p>
+          Minimalist and functional design with sleek finishes, perfect for modern living and entertaining guests.
+        </p>
+      </div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="images/23.100_20_Silvan_TCE_-_Preplanning_package_240630[1]_Page_04.jpg" alt="Greenvale Project 4">
+      <div class="gallery-text">
+        <h2>Master Bedroom</h2>
+        <p>
+          Private retreat with warm textures, luxurious finishes, and seamless indoor-outdoor connections.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER (same as main pages) -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <p>ALI STUDIO</p>
+        <ul class="social-links"></ul>
+      </div>
+      <div class="footer-right">
+        <ul>
+          <li><a href="mailto:Jali@alistudio.com.au">Jali@alistudio.com.au</a></li>
+          <li><a href="tel:+61469893540">0469 893 540</a></li>
+          <li><a href="#" target="_blank">39/43 Duerdin St, Notting Hill Vic 3168</a></li>
+          <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/_alidesignstudio/profilecard/?igsh=MWEwZjN3ZDByY295ZA==" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      var menuLinks = document.getElementById("menu-links");
+      if (menuLinks.style.display === "block") {
+        menuLinks.style.display = "none";
+      } else {
+        menuLinks.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
