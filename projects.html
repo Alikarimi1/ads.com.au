@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO Title & Description -->
-  <title>Residential Projects | ALI DESIGN STUDIO</title>
+  <title>Residential Projects | ALI STUDIO</title>
   <meta name="description" content="Explore ALI STUDIO’s residential projects featuring unique architectural and interior design solutions tailored for modern living.">
-  <meta name="keywords" content="residential design, interior design, modern homes, ALI Design Studio, Melbourne">
+  <meta name="keywords" content="residential design, interior design, modern homes, ALI Studio, Melbourne">
   <meta name="author" content="ALI STUDIO">
 
   <!-- Google Fonts -->
@@ -16,6 +17,7 @@
 </head>
 <body>
   <div class="container">
+    <!-- Menu -->
     <div class="menu">
       <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
       <div class="menu-links" id="menu-links">
@@ -29,17 +31,27 @@
       </div>
     </div>
 
+    <!-- Projects -->
     <div class="projects">
       <div class="row01">
-        <div class="box01"></div>
-        <div class="box02"></div>
+        <a href="greenvale1.html" class="box05">
+          <div class="overlay"><span>Greenvale Residence</span></div>
+        </a>
+        <a href="#" class="box06">
+          <div class="overlay"><span>Greenvale Residence</span></div>
+        </a>
       </div>
       <div class="row02">
-        <div class="box03"></div>
-        <div class="box04"></div>
+        <a href="#" class="box07">
+          <div class="overlay"><span>Greenvale Residencespan></div>
+        </a>
+        <a href="#" class="box08">
+          <div class="overlay"><span>Greenvale Residence</span></div>
+        </a>
       </div>
     </div>
 
+    <!-- Footer -->
     <footer>
       <div class="footer-content">
         <div class="footer-left">
@@ -57,19 +69,18 @@
       </div>
     </footer>
 
+    <!-- Logo -->
     <div class="logo">
-      <a href="index.html"><img src="images/logo.png" ></a>
+      <a href="index.html"><img src="images/logo.png" alt="ALI STUDIO Logo"></a>
     </div>
   </div>
 
+  <!-- Script -->
   <script>
     function toggleMenu() {
       var menuLinks = document.getElementById("menu-links");
-      if (menuLinks.style.display === "block") {
-        menuLinks.style.display = "none";
-      } else {
-        menuLinks.style.display = "block";
-      }
+      menuLinks.style.display =
+        (menuLinks.style.display === "block") ? "none" : "block";
     }
   </script>
 
@@ -77,5 +88,9 @@
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 </html>
+
+
+
+
 
 
