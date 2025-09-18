@@ -576,13 +576,20 @@ footer {
     transform: translateY(-6px);
 }
 
-.member img {
+/* Gray placeholder box for photos */
+.member-photo {
     width: 100%;
-    height: auto;
-    display: block;
-    border-bottom: 2px solid #eee;
+    height: 250px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
 }
 
+/* Info under each member */
 .member-info {
     padding: 20px;
 }
@@ -601,7 +608,6 @@ footer {
     font-family: 'Times New Roman', Times, serif;
     color: #444;
 }
-
 
 /* Contact Section */
 #contact-section {
@@ -785,6 +791,7 @@ footer {
   }
 
 }
+
 
 
 
