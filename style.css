@@ -575,57 +575,44 @@ footer {
 .member:hover {
     transform: translateY(-6px);
 }
-
 /* Members Section */
 #members {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 50px;
-    margin: 100px auto;
-    max-width: 1100px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin: 80px auto;
+    max-width: 900px;
     padding: 0 20px;
 }
 
-.member {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.member:hover {
-    transform: translateY(-6px);
-}
-
-/* Dark placeholder box (future image space) */
 .member-photo {
     width: 100%;
     height: 260px;
-    background: #222; /* dark charcoal/black */
-    border-bottom: 2px solid #eee;
+    background: #222; /* dark placeholder */
 }
 
-/* Info under each photo */
+/* Paragraph text */
 .member-info {
-    padding: 25px;
+    margin-top: 20px;
     text-align: left;
-}
-
-.member-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
-    font-family: "Georgia", serif;
-    font-weight: 600;
-    color: #222;
 }
 
 .member-info p {
     font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.8;
     font-family: "Times New Roman", Times, serif;
-    color: #555;
-    text-align: justify;
+    color: #333;
+    margin-bottom: 18px;
+}
+
+/* Signature (name + title) */
+.signature {
+    font-family: "Georgia", serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin-top: 25px;
+    line-height: 1.5;
 }
 
 
@@ -811,6 +798,7 @@ footer {
   }
 
 }
+
 
 
 
