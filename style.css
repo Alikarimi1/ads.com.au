@@ -576,38 +576,58 @@ footer {
     transform: translateY(-6px);
 }
 
-/* Gray placeholder box for photos */
-.member-photo {
-    width: 100%;
-    height: 250px;
-    background: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #777;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
+/* Members Section */
+#members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    margin: 100px auto;
+    max-width: 1100px;
+    padding: 0 20px;
 }
 
-/* Info under each member */
+.member {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.member:hover {
+    transform: translateY(-6px);
+}
+
+/* Dark placeholder box (future image space) */
+.member-photo {
+    width: 100%;
+    height: 260px;
+    background: #222; /* dark charcoal/black */
+    border-bottom: 2px solid #eee;
+}
+
+/* Info under each photo */
 .member-info {
-    padding: 20px;
+    padding: 25px;
+    text-align: left;
 }
 
 .member-info h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 12px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Georgia", serif;
     font-weight: 600;
     color: #222;
 }
 
 .member-info p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    font-family: 'Times New Roman', Times, serif;
-    color: #444;
+    font-size: 1rem;
+    line-height: 1.7;
+    font-family: "Times New Roman", Times, serif;
+    color: #555;
+    text-align: justify;
 }
+
 
 /* Contact Section */
 #contact-section {
@@ -791,6 +811,7 @@ footer {
   }
 
 }
+
 
 
 
