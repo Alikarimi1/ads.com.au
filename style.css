@@ -553,28 +553,6 @@ footer {
     margin-right: 5%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-/* Members Section */
-#members {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 60px;
-    margin: 80px auto;
-    max-width: 1100px;
-    padding: 0 20px;
-}
-
-.member {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    text-align: center;
-}
-
-.member:hover {
-    transform: translateY(-6px);
-}
 
 /* Members Section */
 #members {
@@ -805,6 +783,7 @@ footer {
   }
 
 }
+
 
 
 
