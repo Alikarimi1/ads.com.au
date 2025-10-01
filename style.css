@@ -136,7 +136,7 @@ body {
 
 .section-text {
   position: relative;  /* keeps it in flow but allows top offset */
-  top: 250px;           /* adjust this to push below navbar */
+  top: 200px;           /* adjust this to push below navbar */
   width: 100%;
   text-align: center;
   font-family: "Times New Roman", Times, serif;
@@ -832,6 +832,7 @@ footer {
   }
 
 }
+
 
 
 
