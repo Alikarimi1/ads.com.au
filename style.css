@@ -459,9 +459,7 @@ body {
   transform: scale(1);
 }
 
-.box04:hover {
-  transform: scale(1.02); /* subtle zoom on the box */
-}
+
 
 
 
@@ -834,6 +832,7 @@ footer {
   }
 
 }
+
 
 
 
