@@ -5,28 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicon -->
-<link rel="icon" type="images/logo.png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
-<meta name="theme-color" content="#ffffff">
-
-  <link rel="icon" href="images/logo.png" sizes="32x32">
-
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- SEO Title & Description -->
-  <title>ALI STUDIO | Residential & Commercial Architecture & Design</title>
-  <meta name="description" content="ALI STUDIO specialises in residential and commercial architecture, interior design, and creative solutions in Melbourne.">
-  <meta name="keywords" content="ALI STUDIO, architecture, interior design, residential, commercial, Melbourne, studio, modern design">
-  <meta name="author" content="ALI STUDIO">
+  <title>Ali Studio | Residential & Commercial Architecture in Melbourne</title>
+  <meta name="description" content="Ali Studio is a Melbourne-based architecture and design practice specialising in residential and commercial projects. We create modern, functional and inspiring spaces.">
+  <meta name="keywords" content="Ali Studio, Melbourne architecture, residential architecture, commercial architecture, interior design Melbourne">
+  <meta name="author" content="Ali Studio">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://www.alistudio.com.au/">
 
-  <!-- Open Graph (Social Sharing) -->
-  <meta property="og:title" content="ALI STUDIO | Residential & Commercial Design">
-  <meta property="og:description" content="Specialists in architecture, interiors, and design across Melbourne.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ali Studio | Residential & Commercial Architecture">
+  <meta property="og:description" content="Melbourne architecture studio specialising in residential and commercial design.">
   <meta property="og:image" content="https://www.alistudio.com.au/images/logo.png">
   <meta property="og:url" content="https://www.alistudio.com.au/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ali Studio">
 
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap">
@@ -37,7 +35,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "ALI STUDIO",
+    "name": "Ali Studio",
     "url": "https://www.alistudio.com.au/",
     "logo": "https://www.alistudio.com.au/images/logo.png",
     "contactPoint": [{
@@ -48,29 +46,31 @@
     }],
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "23 Leopold Cres",
-      "addressLocality": "Hampton Park",
-      "postalCode": "3976",
+      "streetAddress": "2/39/43 Duerdin St",
+      "addressLocality": "Notting Hill",
+      "addressRegion": "VIC",
+      "postalCode": "3168",
       "addressCountry": "AU"
     },
     "sameAs": [
-      "https://www.instagram.com/_alidesignstudio/",
-      "https://www.linkedin.com/"
+      "https://www.instagram.com/_alidesignstudio/"
     ]
   }
   </script>
 </head>
+
 <body>
   <div class="container">
+
     <!-- Menu -->
     <div class="menu">
       <button class="menu-button" onclick="toggleMenu()">&#9776;</button>
       <div class="menu-links" id="menu-links">
         <ul>
-          <li><a href="projects.html">Residential</a></li>
-          <li><a href="comercial.html">Commercial</a></li>          
-          <li><a href="studio.html">Studio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="residential.html">Residential</a></li>
+          <li><a href="commercial.html">Commercial</a></li>          
+          <li><a href="studio.html">Our Studio</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
     </div>
@@ -84,21 +84,22 @@
 
     <!-- Logo -->
     <div class="logo">
-      <a href="index.html"><img src="images/logo.png" ></a>
+      <a href="index.html"><img src="images/logo.png" alt="Ali Studio Logo"></a>
     </div>
+
   </div>
 
   <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div class="footer-left">
-        <p>ALI STUDIO</p>
+        <p>Ali Studio</p>
       </div>
       <div class="footer-right">
         <ul>
           <li><a href="mailto:Jali@alistudio.com.au">Jali@alistudio.com.au</a></li>
           <li><a href="tel:+61469893540">0469 893 540</a></li>
-          <li><a href="#" target="_blank">2/39/43 Duerdin St, Notting Hill VIC 3168</a></li>
+          <li>2/39/43 Duerdin St, Notting Hill VIC 3168</li>
         </ul>
       </div>
     </div>
@@ -108,14 +109,13 @@
   <script>
     function toggleMenu() {
       var menuLinks = document.getElementById("menu-links");
-      menuLinks.style.display = 
+      menuLinks.style.display =
         (menuLinks.style.display === "block") ? "none" : "block";
     }
   </script>
 
   <!-- EmailJS -->
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 </body>
 </html>
-
-
