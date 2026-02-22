@@ -477,7 +477,7 @@ body {
 
 .box01 { background-image: url(images/V03\ -\ Exterior\ View.png); }
 .box02 { background-image: url(images/alistudioimg23\ \(1\).jpg); }
-.box03 { background-image: url(images/alistudioimg23\ \(3\).jpg); }
+.box03 { background-image: url(images/alistudioimg23\ \(3\).jpg; }
 .box04 { background-image: url(images/new\ projects\ jawidali.jpg); }
 
 
@@ -485,7 +485,7 @@ body {
 .box05 { background-image: url(images/Screen\ Captures.png); }
 .box06 { background-image: url(images/nargges\ salon.jpg); }
 .box07 { background-image: url(images/nargges\ salon\ 02.jpg); }
-.box08 { background-image: url(images/alistudioimg23\ \(2\).jpg); }
+.box08 { background-image: url(images/ChatGPT\ Image\ Feb\ 22\,\ 2026\,\ 01_18_30\ PM.png'); }
 /* Footer */
 footer {
   width: 100%;
@@ -835,6 +835,7 @@ footer {
   }
 
 }
+
 
 
 
