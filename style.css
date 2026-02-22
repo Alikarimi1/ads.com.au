@@ -617,21 +617,24 @@ footer {
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
+    border-radius: 0;
 }
 
 
 /* Dark placeholder box (future image space) */
-.member-photo {
+.member-photo2 {
     width: 100%;
     height: 360px;
-    background: #222; /* dark charcoal/black */
-    border-bottom: 2px solid #eee;
-}
+    background-image: url(images/ChatGPT\ Image\ Feb\ 22\,\ 2026\,\ 01_22_45\ PM.png);
+    background-position: center;
+    background-size: cover;
+   
 
-/* Info under each photo */
-.member-info {
-    padding: 25px;
-    text-align: left;
+}
+.member-photo1 {
+    width: 100%;
+    height: 360px;
+    background: gray;
 }
 
 .member-info h3 {
@@ -832,6 +835,7 @@ footer {
   }
 
 }
+
 
 
 
