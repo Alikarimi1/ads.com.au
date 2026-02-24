@@ -651,7 +651,7 @@ footer {
 .member-info p {
     font-size: 1rem;
     line-height: 1.7
-    margin-top:20px;
+    padding-top:20px;
     font-family: "Times New Roman", Times, serif;
     color: #555;
     text-align: justify;
@@ -839,6 +839,7 @@ footer {
   }
 
 }
+
 
 
 
