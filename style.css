@@ -995,50 +995,13 @@ footer {
     font-family: "Times New Roman", Times, serif;
 }
 /* Services Text Rectangle - Fully Responsive */
-.pjp1 {
-    font-size: 16px;
-    line-height: 1.8;
-    font-family: 'Georgia', serif;
-    text-align: justify;        /* align edges */
-    max-width: 800px;           /* desktop max width */
-    margin: 40px auto;          /* center horizontally */
-    padding: 30px 20px;         /* rectangle padding */
-}
 
-/* iPad / tablets */
-@media (max-width: 1024px) {
-    .pjp1 {
-        font-size: 15px;
-        padding: 25px 20px;
-        margin: 30px auto;
-    }
-}
 
-/* Mobile phones */
-@media (max-width: 768px) {
-    .pjp1 {
-        font-size: 14px;
-        padding: 20px 15px;
-        margin: 25px 15px;  /* smaller margins for phone screens */
-        line-height: 1.7;
-    }
-}
 
-/* Small phones */
-@media (max-width: 480px) {
-    .pjp1 {
-        font-size: 13px;
-        padding: 15px 10px; /* smaller padding on small screens */
-        margin: 20px 10px;  /* small side margin to fit screen */
-        line-height: 1.6;
-    }
-}
+
 
 /* Members Section */
 #members {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 100px;
     margin: 100px auto;
     max-width: 1100px;
     padding: 0 20px;
@@ -1049,9 +1012,7 @@ footer {
     border-radius: 12px;
     overflow: hidden;
     border-radius: 0;
-        display: flex;
-    align-items: center;
-    justify-content: center;
+
 }
 
 
@@ -1059,19 +1020,21 @@ footer {
 .member-photo2 {
     width: 360px;
     height: 360px;
+    margin-left: 32%;
     background-image: url(images/ChatGPT\ Image\ Feb\ 22\,\ 2026\,\ 01_22_45\ PM.png);
     background-position: center;
     background-size: cover;
+
    
 
 }
 .member-photo1 {
     width: 360px;
     height: 360px;
+    margin-left: 32%;
     background-image: url(images/ChatGPT\ Image\ Feb\ 22\,\ 2026\,\ 02_06_55\ PM.png);
     background-position: center;
     background-size: cover;
-
 
 }
 
@@ -1083,15 +1046,11 @@ footer {
     color: #222;
 }
 
-.member-info p {
-    font-size: 1rem;
-    line-height: 1.7;
-    padding-top: 40px;
-    font-family: "Times New Roman", Times, serif;
-    color: #555;
-    text-align: justify;
+.member-info p{
+    font-size: 16px;
+    font-family: 'Georgia', serif;
+    padding-left: 45%;
 }
-
 /* Contact Section */
 #contact-section {
     text-align: center;
@@ -1182,9 +1141,9 @@ footer {
     gap: 30px;
   }
 
-  .Jawidali, .alikarimi {
-    width: 90%;
-    height: 300px;
+  .member-photo1, .member-photo2 {
+    width: 360px;
+    height: 360px;
     margin-left: 20px;
   }
 
@@ -1294,7 +1253,6 @@ footer {
     width: 100%;
     max-width: 420px;
     height: 380px;
-    margin: 0 auto;
   }
 
   /* Center member block properly */
