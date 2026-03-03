@@ -1,3 +1,359 @@
+/* ================================================= */
+/* ================= GLOBAL RESET ================== */
+/* ================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+/* ================================================= */
+/* ================= NAVIGATION ==================== */
+/* ================================================= */
+
+.menu {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    z-index: 1000;
+}
+
+.menu-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.menu-links {
+    display: none;
+    margin-top: 20px;
+}
+
+.menu-links ul {
+    list-style: none;
+}
+
+.menu-links li {
+    margin-bottom: 8px;
+}
+
+.menu-links a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #333;
+}
+
+.menu-links a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 80px;
+}
+
+/* ================================================= */
+/* ================= HOME SLIDER =================== */
+/* ================================================= */
+
+.slider {
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: slide 12s infinite;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 4s; }
+.slide:nth-child(3) { animation-delay: 8s; }
+
+@keyframes slide {
+    0%, 25% { opacity: 0; }
+    25%, 75% { opacity: 1; }
+    75%, 100% { opacity: 0; }
+}
+
+/* ================================================= */
+/* ================= PROJECTS PAGE ================= */
+/* ================================================= */
+
+.projects {
+    width: 100%;
+    padding-top: 170px;
+}
+
+.row01, .row02 {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin: 150px 0;
+    flex-wrap: wrap;
+}
+
+.box01, .box02, .box03, .box04,
+.box05, .box06, .box07, .box08 {
+    width: 350px;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Overlay (clean single version) */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(28,27,27,0.7);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: 0.6s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay span {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.box01:hover .overlay,
+.box02:hover .overlay,
+.box03:hover .overlay,
+.box04:hover .overlay,
+.box05:hover .overlay,
+.box06:hover .overlay,
+.box07:hover .overlay,
+.box08:hover .overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ================================================= */
+/* ================= STUDIO PAGE =================== */
+/* ================================================= */
+
+#vision {
+    margin-top: 200px;
+    padding: 20px;
+    text-align: center;
+    font-family: "Times New Roman", serif;
+}
+
+#vision span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#members {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1100px;
+    margin: 100px auto;
+    gap: 120px;
+    padding: 0 20px;
+}
+
+.member-photo1,
+.member-photo2 {
+    width: 100%;
+    height: 360px;
+    background-position: center;
+    background-size: cover;
+}
+
+.member-info {
+    padding-top: 40px;
+    font-family: "Times New Roman", serif;
+    text-align: justify;
+}
+
+.member-info p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Services */
+.services-full {
+    max-width: 800px;
+    margin: 60px auto;
+    font-family: "Times New Roman", serif;
+}
+
+.services-full h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services-image-full {
+    max-width: 900px;
+    margin: 60px auto 120px auto;
+}
+
+/* ================================================= */
+/* ================= CONTACT PAGE ================== */
+/* ================================================= */
+
+#contact-section {
+    padding: 250px 20px 50px;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    text-align: center;
+}
+
+.contact-info {
+    font-family: "Times New Roman", serif;
+    font-size: 14px;
+}
+
+/* ================================================= */
+/* ================= FOOTER ======================== */
+/* ================================================= */
+
+footer {
+    width: 100%;
+    padding: 40px 20px;
+    margin-top: 80px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left p {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-right ul {
+    list-style: none;
+}
+
+.footer-right li {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+/* ================================================= */
+/* ================= RESPONSIVE ==================== */
+/* ================================================= */
+
+@media (max-width: 1024px) {
+
+    .row01, .row02 {
+        gap: 80px;
+        margin: 100px 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .menu {
+        left: 20px;
+        top: 25px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .projects {
+        padding-top: 120px;
+    }
+
+    .box01, .box02, .box03, .box04,
+    .box05, .box06, .box07, .box08 {
+        width: 90%;
+        height: 300px;
+    }
+
+    #members {
+        gap: 80px;
+        margin: 60px auto;
+    }
+
+    .member-info p {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-left p {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .menu-button {
+        font-size: 20px;
+    }
+
+    .footer-left p {
+        font-size: 24px;
+    }
+
+}
 * {
     margin: 0;
     padding: 0;
@@ -594,13 +950,51 @@ footer {
     font-weight: bold;
     font-size: 14px;
 }
-
-#vision p {
+.pjp{
     font-size: 16px;
     margin-left: 5%;
     margin-top: 300px;
     margin-right: 5%;
     font-family: "Times New Roman", Times, serif;
+}
+/* Services Text Rectangle - Fully Responsive */
+.pjp1 {
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: 'Georgia', serif;
+    text-align: justify;        /* align edges */
+    max-width: 800px;           /* desktop max width */
+    margin: 40px auto;          /* center horizontally */
+    padding: 30px 20px;         /* rectangle padding */
+}
+
+/* iPad / tablets */
+@media (max-width: 1024px) {
+    .pjp1 {
+        font-size: 15px;
+        padding: 25px 20px;
+        margin: 30px auto;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+    .pjp1 {
+        font-size: 14px;
+        padding: 20px 15px;
+        margin: 25px 15px;  /* smaller margins for phone screens */
+        line-height: 1.7;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .pjp1 {
+        font-size: 13px;
+        padding: 15px 10px; /* smaller padding on small screens */
+        margin: 20px 10px;  /* small side margin to fit screen */
+        line-height: 1.6;
+    }
 }
 
 /* Members Section */
@@ -618,12 +1012,15 @@ footer {
     border-radius: 12px;
     overflow: hidden;
     border-radius: 0;
+        display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 /* Dark placeholder box (future image space) */
 .member-photo2 {
-    width: 100%;
+    width: 360px;
     height: 360px;
     background-image: url(images/ChatGPT\ Image\ Feb\ 22\,\ 2026\,\ 01_22_45\ PM.png);
     background-position: center;
@@ -632,7 +1029,7 @@ footer {
 
 }
 .member-photo1 {
-    width: 100%;
+    width: 360px;
     height: 360px;
     background-image: url(images/ChatGPT\ Image\ Feb\ 22\,\ 2026\,\ 02_06_55\ PM.png);
     background-position: center;
@@ -724,18 +1121,6 @@ footer {
     height: 350px;
   } */
 
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-    padding: 0;
-  }
-
-  .footer-left {
-    margin: 10px 55px;
-  }
-  .footer-right{
-    margin: 2px 90px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -794,23 +1179,7 @@ footer {
 
 
 
-  .contact-info, .contact-info p {
-    text-align: center;
-    font-size: 12px;
-  }
-
-  .menu-button {
-    font-size: 20px;
-  }
-
-  .menu-links a {
-    font-size: 12px;
-  }
-
-  .footer-content {
-    padding: 20px;
-  }
-
+ 
   .contact-container {
     flex-direction: column;
     align-items: center;
@@ -850,6 +1219,66 @@ footer {
 
 
 
+/* ========================= */
+/* ===== iPAD FIX ONLY ===== */
+/* ========================= */
+
+/* iPad Portrait & Landscape */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Fix Vision spacing */
+  #vision {
+    margin-top: 180px;
+    padding: 0 40px;
+  }
+
+  .pjp {
+    margin-top: 200px;
+    margin-left: 8%;
+    margin-right: 8%;
+    font-size: 15px;
+  }
+
+  /* Fix Services text width */
+  .pjp1 {
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 15px;
+  }
+
+  /* Fix Members grid spacing */
+  #members {
+    gap: 60px;
+    margin: 60px auto;
+  }
+
+  .member-photo1,
+  .member-photo2 {
+    width: 100%;
+    max-width: 420px;
+    height: 380px;
+    margin: 0 auto;
+  }
+
+  /* Center member block properly */
+  .member {
+    flex-direction: column;
+  }
+
+  /* Footer fix */
+  .footer-left {
+    margin-left: 0;
+  }
+
+  .footer-right {
+    margin-right: 0;
+  }
+
+  .footer-content {
+    padding: 0 40px;
+  }
+
+}
 
 
 
