@@ -844,60 +844,97 @@ body {
 .box08 { background-image: url('images/ChatGPT\ Image\ Feb\ 22\,\ 2026\,\ 01_18_30\ PM.png'); }
 /* Footer */
 footer {
-  width: 100%;
-  padding: 20px 0;
-  font-family: 'Comfortaa', sans-serif;
-  position: relative;
-  bottom: 0;
-  margin-top: 50px;
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #fff;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .footer-left p {
-  font-size: 70px;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.footer-left {
-  list-style: none;
-  padding-top: 10px;
-  margin: 0;
-  margin-left: -100px;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    margin-bottom: 10px;
 }
 
 .footer-right ul {
-  list-style: none;
-  padding-top: 20px;
-  margin: 0;
-  margin-right: -100px;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-right li {
-  margin-bottom: 5px;
-  font-size: 10px;
+    margin-bottom: 5px;
+    font-size: 12px;
 }
 
 .footer-right a {
-  color: black;
-  text-decoration: none;
+    text-decoration: none;
+    color: #000;
 }
 
 .footer-right a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
+/* ================= RESPONSIVE FOOTER ================= */
+
+/* Tablets (iPad) */
+@media (max-width: 1024px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 0 40px;
+    }
+
+    .footer-left p {
+        font-size: 50px;
+        margin: 0;
+    }
+
+    .footer-right ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-right li {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 768px) {
+    .footer-left p {
+        font-size: 40px;
+    }
+
+    .footer-right li {
+        font-size: 12px;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .footer-left p {
+        font-size: 30px;
+    }
+
+    .footer-right li {
+        font-size: 10px;
+    }
+}
 /* About Section */
 .about-section {
     display: flex;
@@ -1267,15 +1304,15 @@ footer {
 
   /* Footer fix */
   .footer-left {
-    margin-left: 0;
+    margin-left: 0px;
   }
 
   .footer-right {
-    margin-right: 0;
+    margin-right: 0px;
   }
 
   .footer-content {
-    padding: 0 40px;
+    padding: 0px 40px;
   }
 
 }
