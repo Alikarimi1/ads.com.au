@@ -144,8 +144,8 @@ body {
   font-size: clamp(14px, 2vw, 18px); /* responsive size */
   font-weight: 500;
   color: #333;
-  padding-left: 30%;
-  padding-right: 30%;
+  padding-left: 15%;
+  padding-right: 15%;
   margin-bottom: 30px;
   line-height: 1.4;
   z-index: 10;          /* ensures it’s above background images */
@@ -646,6 +646,7 @@ footer {
   }
 
 }
+
 
 
 
