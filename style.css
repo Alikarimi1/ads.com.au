@@ -76,6 +76,7 @@ body {
     height: 80px;
     width: auto;
     cursor: pointer;
+        opacity: 0.7;
 }
 
 /* Slider CSS */
@@ -645,6 +646,7 @@ footer {
   }
 
 }
+
 
 
 
