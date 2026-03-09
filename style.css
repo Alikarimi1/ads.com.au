@@ -115,7 +115,7 @@ body {
 .section-text {
   width: 100%;
   text-align: center;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(16px, 2vw, 22px); /* responsive font size */
   font-weight: 500;
   color: #333;
@@ -139,7 +139,7 @@ body {
   top: 200px;           /* adjust this to push below navbar */
   width: 100%;
   text-align: center;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: clamp(14px, 2vw, 18px); /* responsive size */
   font-weight: 500;
   color: #333;
@@ -200,7 +200,7 @@ body {
     font-weight: bold;
     font-size: 16px;
     color: #fff;
-    font-family: Sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 0 10px; /* prevent overflow on small screens */
 }
@@ -275,7 +275,7 @@ body {
 footer {
   width: 100%;
   padding: 20px 50px;
-  font-family: 'Comfortaa', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background: #fff;
   margin-top: 50px;
   box-sizing: border-box;
@@ -367,7 +367,7 @@ footer {
     font-size: 2.5em;
     color: #333;
     margin-bottom: 20px;
-    font-family: 'New Rocker', serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .about-content p {
@@ -385,11 +385,12 @@ footer {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.8;
-    font-family: 'Georgia', serif;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 #vision span {
-    font-family: "Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 14px;
 }
@@ -399,7 +400,8 @@ footer {
     margin-left: 5%;
     margin-top: 300px;
     margin-right: 5%;
-    font-family: "Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 /* Members Section */
@@ -453,7 +455,7 @@ footer {
     line-height: 1.7;
     padding-top: 40px;
     padding-bottom: 40px;
-    font-family: "Times New Roman", Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
     color: #555;
     text-align: justify;
 }
@@ -479,7 +481,7 @@ footer {
     max-width: 400px;
     text-align: left;
     font-size: 14px;
-    font-family: 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;;
 }
 
 .contact-details, .social-list {
@@ -643,6 +645,7 @@ footer {
   }
 
 }
+
 
 
 
